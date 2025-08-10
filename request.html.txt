@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Запрос на доставку из Китая — Китайская аптека</title>
+    <meta name="description" content="Оставьте запрос на доставку китайского товара. Поможем найти."/>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <header>
+        <h1>Нужен товар из Китая?</h1>
+        <p>Поможем найти и проверим возможность доставки</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="request.html">Запрос из Китая</a>
+        <a href="blog.html">Блог</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Как это работает?</h2>
+            <ol>
+                <li>Оставьте запрос с названием или фото товара.</li>
+                <li>Мы проверим: можно ли его ввезти в РФ по закону.</li>
+                <li>Если можно — сообщим стоимость и сроки доставки.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Оставить запрос</h2>
+            <form action="https://wa.me/79991234567" method="get" target="_blank">
+                <p><input type="text" name="name" placeholder="Ваше имя" required></p>
+                <p><input type="text" name="product" placeholder="Название товара или 'аналог...'" required></p>
+                <p><textarea name="comment" placeholder="Комментарий, фото (опишите)"></textarea></p>
+                <button type="submit" class="btn">Отправить в WhatsApp</button>
+            </form>
+            <p><small>Форма отправляет сообщение в WhatsApp. Убедитесь, что у вас установлен клиент.</small></p>
+        </section>
+
+        <section>
+            <h2>Важно</h2>
+            <ul>
+                <li>Мы не продаём лекарства.</li>
+                <li>Запрещённые вещества не подлежат ввозу.</li>
+                <li>Это не заказ, а <strong>информационный запрос</strong>.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Китайская аптека. Все права защищены.</p>
+        <p>Сайт не является аптекой. Не заменяет консультацию врача.</p>
+    </footer>
+</body>
+</html>
