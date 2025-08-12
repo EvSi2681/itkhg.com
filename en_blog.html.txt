@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Blog — ITTM</title>
+    <meta name="description" content="Articles about Chinese health traditions."/>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <header>
+        <h1>Blog</h1>
+        <p>Articles about Chinese health traditions</p>
+    </header>
+    <nav>
+        <a href="en_index.html">Home</a>
+        <a href="en_catalog.html">Catalog</a>
+        <a href="en_request.html">Request from China</a>
+        <a href="en_blog.html">Blog</a>
+    </nav>
+    <main>
+        <article>
+            <h2>How is cardiovascular health supported in China?</h2>
+            <p>In traditional Chinese culture, great attention is paid to the circulation of <em>qi</em> and blood. Herbal components are used to support cardiovascular health.</p>
+            <h3>Ginkgo Biloba</h3>
+            <p>Used to support microcirculation. Included in formulations aimed at balancing the body.</p>
+            <h3>Ginseng</h3>
+            <p>An adaptogen traditionally used to increase the body's overall resilience.</p>
+            <h3>Musk Sage (Danshen)</h3>
+            <p>Used to activate blood and eliminate stagnation.</p>
+            <p><em>Note: Information is for cultural purposes. Not a medical recommendation.</em></p>
+            <p><a href="en_request.html" class="btn">Interested in products with these components? Submit a request</a></p>
+        </article>
+    </main>
+    <footer>
+        <p>&copy; 2025 ITKH. All rights reserved.</p>
+        <p>Information is for educational purposes. Not a medical recommendation.</p>
+        <p>For business inquiries: <a href="mailto:i.t.t.m@qq.com">i.t.t.m@qq.com</a></p>
+    </footer>
+</body>
+</html>
