@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Natural and proven solutions from China</title>
+    <meta name="description" content="Submit a request for a Chinese product. We'll help you find it."/>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <header>
+        <h1>Need a Product from China?</h1>
+        <p>We'll help you find it and check delivery possibilities</p>
+    </header>
+    <nav>
+        <a href="en_index.html">Home</a>
+        <a href="en_catalog.html">Catalog</a>
+        <a href="en_request.html">Request from China</a>
+        <a href="en_blog.html">Blog</a>
+    </nav>
+    <main>
+        <section>
+            <h2>How it works?</h2>
+            <ol>
+                <li>Submit a request with the product name or photo.</li>
+                <li>We'll check if it can be legally imported into Russia.</li>
+                <li>If possible, we'll inform you of the cost and delivery time.</li>
+            </ol>
+        </section>
+        <section>
+            <h2>Submit a Request</h2>
+            <form action="https://wa.me/79871149378" method="get" target="_blank">
+                <p><input type="text" name="name" placeholder="Your Name" required></p>
+                <p><input type="text" name="product" placeholder="Product name or 'analog...'" required></p>
+                <p><textarea name="comment" placeholder="Comment, photo (describe)"></textarea></p>
+                <button type="submit" class="btn">Send to WhatsApp</button>
+            </form>
+            <p><small>The form sends a message to WhatsApp. Make sure you have the app installed.</small></p>
+        </section>
+        <section>
+            <h2>Important</h2>
+            <ul>
+                <li>We do not sell medicines.</li>
+                <li>Prohibited substances cannot be imported.</li>
+                <li>This is not an order, but an <strong>information request</strong>.</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 ITKH. All rights reserved.</p>
+        <p>This site is not a pharmacy. Does not replace medical advice.</p>
+        <p>For business inquiries: <a href="mailto:i.t.t.m@qq.com">i.t.t.m@qq.com</a></p>
+    </footer>
+</body>
+</html>
