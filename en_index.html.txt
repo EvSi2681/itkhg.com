@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Natural and proven solutions from China</title>
+    <meta name="description" content="Authentic Chinese herbal supplements, drinks, and skincare. Legal and safe."/>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <header>
+        <h1>ITKH — Natural Solutions from China</h1>
+        <p>Herbal products inspired by Chinese traditions</p>
+    </header>
+    <nav>
+        <a href="en_index.html">Home</a>
+        <a href="en_catalog.html">Catalog</a>
+        <a href="en_request.html">Request from China</a>
+        <a href="en_blog.html">Blog</a>
+    </nav>
+    <main>
+        <section>
+            <h2>What do we offer?</h2>
+            <p>We offer a wide range of natural products based on Chinese health traditions. All available items have passed safety checks.</p>
+            <p><strong>Note:</strong> Products are not medicines. Consult a specialist before use.</p>
+        </section>
+        <section>
+            <h2>Need a product from China?</h2>
+            <p>If you're looking for an item not in our catalog — submit a request. We'll check the possibility of delivery from China.</p>
+            <a href="en_request.html" class="btn">Submit Request</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 ITTM. All rights reserved.</p>
+        <p>This site is not a pharmacy. Does not replace medical advice.</p>
+    </footer>
+</body>
+</html>
