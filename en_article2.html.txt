@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Herbal Remedies for Sleep and Calmness — ITKN Blog</title>
+    <meta name="description" content="How traditional Chinese practices support the nervous system: jianzao, GABA, tianma."/>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <header>
+        <h1>Herbal Remedies for Sleep and Calmness</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="catalog.html">Catalog</a>
+        <a href="request.html">Request from China</a>
+        <a href="blog.html">Blog</a>
+    </nav>
+
+    <main>
+        <p>In traditional Chinese medicine, great attention is paid to the balance of <em>Yin-Yang</em> and the state of the nervous system. Herbs and natural compounds are used to reduce anxiety and improve sleep quality.</p>
+<a href="en_article2.html" style="position: absolute; top: 20px; right: 20px; color: #0066cc; text-decoration: none; font-size: 16px;">Rus</a>
+        <h3>Jianzao (Ziziphus jujuba)</h3>
+        <p>Seeds of the Chinese date, traditionally used to calm the nervous system. Helps with insomnia and irritability.</p>
+
+        <h3>GABA (Gamma-Aminobutyric Acid)</h3>
+        <p>A natural neurotransmitter that helps reduce nervous system activity. Often included in sleep-support formulas.</p>
+
+        <h3>Tianma (Gastrodia elata)</h3>
+        <p>An orchid rhizome used for headaches, neuralgia, and sleep disorders.</p>
+
+        <p><em>Note: This information is for educational purposes only and is not a medical recommendation.</em></p>
+
+        <p><a href="request.html" class="btn">Interested in products with these ingredients? Leave a request</a></p>
+    </main>
+
+    <footer>
+        <p>© 2025 ITKN. All rights reserved.</p>
+        <p>Information is for educational purposes. Not a substitute for medical advice.</p>
+    </footer>
+</body>
+</html>
