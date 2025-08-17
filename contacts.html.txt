@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Контакты — ITK Health Goods</title>
+    <meta name="description" content="Свяжитесь с нами: email, WhatsApp, QR-код для быстрой связи.">
+    <link rel="stylesheet" href="styles.css"/>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            color: #333;
+            background: 
+                linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                url('https://i.postimg.cc/x8FpFscq/image.png') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #2c5e3c;
+            margin: 0 0 10px 0;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 12px 24px;
+            background: #2c5e3c;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #254d32;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            font-size: 14px;
+            color: #666;
+            margin-top: auto;
+        }
+
+        nav {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #2c5e3c;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Свяжитесь с нами</h1>
+        <p>Мы всегда рады помочь</p>
+        <a href="en_contacts.html" style="position: absolute; top: 20px; right: 20px; color: #0066cc; text-decoration: none; font-size: 16px;">Eng</a>
+    </header>
+
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="request.html">Запрос из Китая</a>
+        <a href="blog.html">Блог</a>
+        <a href="contacts.html">Контакты</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Электронная почта</h2>
+            <p style="font-size: 24px; font-weight: bold; color: #2c5e3c;">i.t.t.m@qq.com</p>
+            <p>Пишите нам по любым вопросам — мы ответим в течение 24 часов.</p>
+        </section>
+
+        <section>
+            <h2>WhatsApp</h2>
+            <p><a href="https://wa.me/79871149378" class="btn" target="_blank">Написать в WhatsApp</a></p>
+            <p>Быстрая связь, консультация, заказ.</p>
+        </section>
+
+        <section>
+            <h2>QR-код для быстрой связи</h2>
+            <p>Отсканируйте, чтобы быстро перейти в WhatsApp:</p>
+            <img src="https://i.postimg.cc/c4rJzrrb/QR-CODE-com-whatsapp-w4b.jpg" alt="QR-код для WhatsApp" width="200" style="border-radius: 8px;">
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 ITTM. Все права защищены.</p>
+        <p>Сайт не является аптекой. Не заменяет консультацию врача.</p>
+    </footer>
+</body>
+</html>
