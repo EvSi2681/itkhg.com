@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Поддержка эмоционального баланса — Блог ITKHG</title>
+    <meta name="description" content="Как в Китае поддерживают психоэмоциональное состояние: традиции и современные подходы."/>
+    <link rel="stylesheet" href="styles.css"/>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            color: #333;
+            background: 
+                linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                url('https://i.postimg.cc/Z5vyHNWP/image.png') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #2c5e3c;
+            margin: 0 0 10px 0;
+            font-size: 28px;
+        }
+
+        p {
+            margin: 10px 0;
+            color: #666;
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 12px 24px;
+            background: #2c5e3c;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #254d32;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            font-size: 14px;
+            color: #666;
+            margin-top: auto;
+        }
+
+        nav {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #2c5e3c;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Поддержка эмоционального баланса</h1>
+        <a href="en_article4.html" style="position: absolute; top: 20px; right: 20px; color: #0066cc; text-decoration: none; font-size: 16px;">Eng</a>
+    </header>
+
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="request.html">Запрос из Китая</a>
+        <a href="blog.html">Блог</a>
+        <a href="contacts.html">Контакты</a>
+    </nav>
+
+    <main>
+        <p>В традиционной китайской медицине большое внимание уделяется балансу <em>инь-ян</em> и состоянию нервной системы. Для поддержки эмоционального фона используются растительные составы и натуральные компоненты.</p>
+
+        <p>В Китае применяются различные подходы к поддержке психоэмоционального состояния, включая диету, медитацию и растительные средства. Некоторые современные препараты, такие как Сертралин, используются в клинической практике, но их применение требует строгого врачебного контроля.</p>
+
+        <p><em>Важно: Информация носит культурологический и образовательный характер. Не является лечебной рекомендацией.</em></p>
+
+        <p><a href="request.html" class="btn">Интересует поддержка нервной системы? Оставьте запрос</a></p>
+    </main>
+
+    <footer>
+        <p>© 2025 ITKN. Все права защищены.</p>
+        <p>Информация носит ознакомительный характер. Не является медицинской рекомендацией.</p>
+    </footer>
+</body>
+</html>
