@@ -233,8 +233,17 @@
                 </a>
             </div>
         </div>
+        <div class="tabs">
+    <button class="tab-btn active" onclick="filterCategory('all')">Все</button>
+    <button class="tab-btn" onclick="filterCategory('heart')">Поддержка сердца</button>
+    <button class="tab-btn" onclick="filterCategory('digestion')">Поддержка пищеварения</button>
+    <button class="tab-btn" onclick="filterCategory('nervous')">Нервная система</button>
+    <button class="tab-btn" onclick="filterCategory('immunity')">Иммунитет</button>
+    <button class="tab-btn" onclick="filterCategory('cosmetics')">Косметика</button>
+    <button class="tab-btn" onclick="filterCategory('accessories')">Аксессуары</button>
+</div>
         <main>
-        <div class="product">
+        <div class="product" data-category="heart">
     <img src="https://i.postimg.cc/gjHSCsYK/1.jpg" alt="Чай из красного гороха, риса и семян лотоса" width="150">
     <h3>赤小豆薏米芡实茶 — Чай из красного гороха, риса и семян лотоса</h3>
     <p><strong>Состав:</strong> Красный горох, рисовые зародыши, семена лотоса.</p>
@@ -255,6 +264,7 @@
     </footer>
 </body>
 </html>
+
 
 
 
