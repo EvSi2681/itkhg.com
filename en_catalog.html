@@ -3,81 +3,46 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Catalog of Supplements and Cosmetics — ITKH</title>
-    <meta name="description" content="Catalog of natural Chinese supplements, drinks, and cosmetics. No medicines."/>
+    <title>Catalog of Chinese Health Products — ITKN</title>
+    <meta name="description" content="Catalog of natural dietary supplements, drinks, and cosmetics from China. No medicines."/>
     <link rel="stylesheet" href="styles.css"/>
-</head>
+
     <style>
+        /* Общие стили */
         body {
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', sans-serif;
             color: #333;
             background: 
-                linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), /* Темный слой для читаемости */
-                url('https://i.postimg.cc/QMsCCbxB/image.png') no-repeat center center fixed; /* Ваша ссылка */
+                linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                url('https://i.postimg.cc/QMsCCbxB/image.png') no-repeat center center fixed;
             background-size: cover;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
         }
 
-        main {
-            flex: 1;
-            padding: 40px 20px;
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .product {
-            background: rgba(255, 255, 255, 0.95); /* Полупрозрачный белый фон */
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .product img {
-            max-width: 150px;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        .disclaimer {
-            font-size: 0.9em;
-            color: #555;
-            font-style: italic;
-        }
-
-        .btn {
-            display: inline-block;
-            margin: 10px 0;
-            padding: 10px 20px;
-            background: #2c5e3c;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-        }
-
-        .btn:hover {
-            background: #254d32;
-        }
-
-        h1, h2, h3 {
-            color: #2c5e3c;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
+        header {
             background: rgba(255, 255, 255, 0.95);
-            font-size: 14px;
-            color: #666;
-            margin-top: auto;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
 
+        h1 {
+            color: #2c5e3c;
+            margin: 0 0 10px 0;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        /* Навигация */
         nav {
             text-align: center;
             margin: 10px 0;
@@ -93,13 +58,101 @@
         nav a:hover {
             text-decoration: underline;
         }
+
+        /* Категории */
+        .categories-section {
+            flex: 1;
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .categories-section h2 {
+            text-align: center;
+            color: #2c5e3c;
+            margin-bottom: 40px;
+            font-size: 28px;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .category-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .category-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .category-card p {
+            padding: 18px 15px;
+            margin: 0;
+            color: #2c5e3c;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .category-card a {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Кнопка WhatsApp */
+        .whatsapp-btn {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 12px 24px;
+            background-color: #25D366;
+            color: white !important;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+        }
+
+        /* Футер */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            font-size: 14px;
+            color: #666;
+            margin-top: auto;
+        }
     </style>
+</head>
 <body>
     <header>
-        <h1>Catalog of Products</h1>
-        <p>Only legal supplements, drinks, and cosmetics</p>
+        <h1>Product Catalog</h1>
+        <p>Only legal dietary supplements, drinks, and cosmetics</p>
         <a href="catalog.html" style="position: absolute; top: 20px; right: 20px; color: #0066cc; text-decoration: none; font-size: 16px;">Rus</a>
     </header>
+
     <nav>
         <a href="en_index.html">Home</a>
         <a href="en_catalog.html">Catalog</a>
@@ -107,202 +160,85 @@
         <a href="en_blog.html">Blog</a>
         <a href="en_contacts.html">Contacts</a>
     </nav>
+
     <main>
-        <div class="product">
-            <img src="https://i.postimg.cc/gjHSCsYK/1.jpg" width="200" height="auto" style="border-radius: 8px;">
-            <h3>Red Bean, Rice & Lotus Seed Tea</h3>
-            <p><strong>Ingredients:</strong> Red bean, rice sprouts, lotus seeds.</p>
-            <p><strong>Use:</strong> 30–50 g per 300–450 ml boiling water, steep 3–6 min.</p>
-            <p><strong>Storage:</strong> In a dry place, up to 25°C.</p>
-            <p><strong>Weight:</strong> 330 g</p>
-            <p><em>Not a medicinal product. Not recommended for children under 3 years.</em></p>
-            <p style="color: #8A2BE2; font-style: italic; font-weight: bold;">
-            For digestive support and natural detox
-                </p>
-            <a href="https://wa.me/79871149378?text=Hello!%20I%20want%20to%20know%20about%20Red%20Bean%20Tea" class="button">Ask in WhatsApp</a>
+        <div class="categories-section">
+            <h2>Choose a Category</h2>
+            <div class="categories-grid"> 
+                <a href="en_catalog.html#heart">
+                    <div class="category-card">
+                        <img src="https://i.postimg.cc/43y2s8Zg/39.1.jpg" alt="Cardiovascular Support">
+                        <p>Cardiovascular Support</p>
+                    </div>
+                </a>
+                <a href="en_catalog.html#detox">
+                    <div class="category-card">
+                        <img src="https://i.postimg.cc/gjHSCsYK/1.jpg" alt="Digestive and Detox Support">
+                        <p>Digestive and Detox Support</p>
+                    </div>
+                </a>
+                <a href="en_catalog.html#urinary">
+                    <div class="category-card">
+                        <img src="https://i.postimg.cc/3xG5kYqj/35.jpg" alt="Urinary System Support">
+                        <p>Urinary System Support</p>
+                    </div>
+                </a>
+                <a href="en_catalog.html#joints">
+                    <div class="category-card">
+                        <img src="https://i.postimg.cc/28pW6xGd/26.jpg" alt="Musculoskeletal Support">
+                        <p>Musculoskeletal Support</p>
+                    </div>
+                </a>
+                <a href="en_catalog.html#digestion">
+                    <div class="category-card">
+                        <img src="https://i.postimg.cc/3xG5kYqj/35.jpg" alt="Digestive Support">
+                        <p>Digestive Support</p>
+                    </div>
+                </a>
+                <a href="en_catalog.html#immunity">
+                    <div class="category-card">
+                        <img src="https://i.postimg.cc/28pW6xGd/26.jpg" alt="Immune System Support">
+                        <p>Immune System Support</p>
+                    </div>
+                </a>
+                <a href="en_catalog.html#nervous">
+                    <div class="category-card">
+                        <img src="https://i.postimg.cc/gjHSCsYK/1.jpg" alt="Nervous System and Calmness">
+                        <p>Nervous System and Calmness</p>
+                    </div>
+                </a>
+                <a href="en_catalog.html#metabolism">
+                    <div class="category-card">
+                        <img src="https://i.postimg.cc/43y2s8Zg/39.1.jpg" alt="Lipid and Carbohydrate Metabolism">
+                        <p>Lipid and Carbohydrate Metabolism</p>
+                    </div>
+                </a>
+                <a href="en_catalog.html#men">
+                    <div class="category-card">
+                        <img src="https://i.postimg.cc/3xG5kYqj/35.jpg" alt="Men's Health Support">
+                        <p>Men's Health Support</p>
+                    </div>
+                </a>
+                <a href="en_catalog.html#women">
+                    <div class="category-card">
+                        <img src="https://i.postimg.cc/28pW6xGd/26.jpg" alt="Women's Health Support">
+                        <p>Women's Health Support</p>
+                    </div>
+                </a>
+                <a href="en_catalog.html#care">
+                    <div class="category-card">
+                        <img src="https://i.postimg.cc/gjHSCsYK/1.jpg" alt="Daily Care and Support">
+                        <p>Daily Care and Support</p>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="product">
-            <img src="https://i.postimg.cc/ZKJDrGcs/2.jpg" width="200" height="auto" style="border-radius: 8px;">
-            <h3>Sea Cucumber Concentrate</h3>
-            <p><strong>Ingredients:</strong> Sea cucumber, ginseng, collagen.</p>
-            <p><strong>Use:</strong> 1 bottle (20 ml) per day.</p>
-            <p><strong>Contraindications:</strong> Pregnant, breastfeeding, children under 1 year.</p>
-            <p><strong>Volume:</strong> 100 ml (5×20 ml)</p>
-            <p><em>Not a medicinal product.</em></p>
-            <p style="color: #8A2BE2; font-style: italic; font-weight: bold;">
-             For energy and immune system support
-                </p>
-            <a href="https://wa.me/79871149378?text=Hello!%20I%20want%20to%20know%20about%20Sea%20Cucumber%20Concentrate" class="button">Ask in WhatsApp</a>
-        </div>
-        <div class="product">
-            <img src="https://i.postimg.cc/ncTST3SF/3.jpg" width="200" height="auto" style="border-radius: 8px;">
-            <h3>American Ginseng Concentrate</h3>
-            <p><strong>Ingredients:</strong> American ginseng, black currant, collagen.</p>
-            <p><strong>Use:</strong> 1–2 bottles per day.</p>
-            <p><strong>Volume:</strong> 100 ml (5×20 ml)</p>
-            <p><em>Dietary supplement. Not a medicine.</em></p>
-            <p style="color: #8A2BE2; font-style: italic; font-weight: bold;">
-              For immune support and increased body resilience
-                </p>
-            <a href="https://wa.me/79871149378?text=Hello!%20I%20want%20to%20know%20about%20American%20Ginseng%20Concentrate" class="button">Ask in WhatsApp</a>
-        </div>
-        <div class="product">
-            <img src="https://i.postimg.cc/Z5R7Q6Xr/4.jpg" width="200" height="auto" style="border-radius: 8px;">
-            <h3>Glycine Special Diet</h3>
-            <p><strong>Ingredients:</strong> Glycine (44%), vitamins B1 and B2.</p>
-            <p><strong>Use:</strong> 3 tablets 2 times a day.</p>
-            <p><strong>Volume:</strong> 160 g (200 tablets)</p>
-            <p><em>Dietary supplement. For active people.</em></p>
-            <p style="color: #8A2BE2; font-style: italic; font-weight: bold;">
-           For nervous system and emotional well-being support
-                </p>
-            <a href="https://wa.me/79871149378?text=Hello!%20I%20want%20to%20know%20about%20Glycine%20Special%20Diet" class="button">Ask in WhatsApp</a>
-        </div>
-        <div class="product">
-            <img src="https://i.postimg.cc/xdNsfnf8/5.jpg" width="200" height="auto" style="border-radius: 8px;">
-            <h3>Shui Mu Yin Drink</h3>
-            <p><strong>Ingredients:</strong> Ginseng, georgina, GABA, honey.</p>
-            <p><strong>Use:</strong> 1–3 portions per day.</p>
-            <p><strong>Volume:</strong> 300 ml (10×30 ml)</p>
-            <p><em>Not for children under 14, pregnant, or breastfeeding.</em></p>
-            <p style="color: #8A2BE2; font-style: italic; font-weight: bold;">
-             For body support and natural balance
-                </p>
-            <a href="https://wa.me/79871149378?text=Hello!%20I%20want%20to%20know%20about%20Shui%20Mu%20Yin%20Drink" class="button">Ask in WhatsApp</a>
-        </div>
-        <div class="product">
-            <img src="https://i.postimg.cc/QtLfVwCb/6.jpg" width="200" height="auto" style="border-radius: 8px;">
-            <h3>Plant-Based Recovery Drink</h3>
-            <p><strong>Ingredients:</strong> Georgina, ginger, dried plums, honey.</p>
-            <p><strong>Use:</strong> 1 bottle (10 ml) per day.</p>
-            <p><strong>Volume:</strong> 60 ml (6×10 ml)</p>
-            <p><em>Dietary supplement. Not for children under 14.</em></p>
-            <p style="color: #8A2BE2; font-style: italic; font-weight: bold;">
-             For body support after stress
-                </p>
-            <a href="https://wa.me/79871149378?text=Hello!%20I%20want%20to%20know%20about%20Plant-Based%20Recovery%20Drink" class="button">Ask in WhatsApp</a>
-        </div>
-        <div class="product">
-            <img src="https://i.postimg.cc/pTDqjCnt/7.jpg" width="200" height="auto" style="border-radius: 8px;">
-            <h3>Coenzyme Q10 Soft Capsules</h3>
-            <p><strong>Ingredients:</strong> Coenzyme Q10, soybean oil, gelatin.</p>
-            <p><strong>Use:</strong> 1 capsule 2 times a day.</p>
-            <p><strong>Contraindications:</strong> Children, pregnant, breastfeeding.</p>
-            <p><strong>Volume:</strong> 30 capsules</p>
-            <p><em>Dietary supplement. Not a medicine.</em></p>
-            <p style="color: #8A2BE2; font-style: italic; font-weight: bold;">
-             For heart and energy support
-                </p>
-            <a href="https://wa.me/79871149378?text=Hello!%20I%20want%20to%20know%20about%20Coenzyme%20Q10%20Soft%20Capsules" class="button">Ask in WhatsApp</a>
-        </div>
-        <div class="product">
-            <img src="https://i.postimg.cc/prRkJjD5/8.jpg" width="200" height="auto" style="border-radius: 8px;">
-            <h3>Lycopene Soft Capsules</h3>
-            <p><strong>Ingredients:</strong> Lycopene, gelatin, glycerin.</p>
-            <p><strong>Use:</strong> 1 capsule per day.</p>
-            <p><strong>Contraindications:</strong> Children, pregnant, breastfeeding.</p>
-            <p><strong>Volume:</strong> 36 capsules</p>
-            <p><em>Dietary supplement. Antioxidant.</em></p>
-            <p style="color: #8A2BE2; font-style: italic; font-weight: bold;">
-             Antioxidant for natural body defense
-                </p>
-            <a href="https://wa.me/79871149378?text=Hello!%20I%20want%20to%20know%20about%20Lycopene%20Soft%20Capsules" class="button">Ask in WhatsApp</a>
-        </div>
-        <div class="product">
-            <img src="https://i.postimg.cc/tJkkSg5S/9.jpg" width="200" height="auto" style="border-radius: 8px;">
-            <h3>Danshen Powder (Sage)</h3>
-            <p><strong>Ingredients:</strong> Musk sage root.</p>
-            <p><strong>Use:</strong> 2–6 g per day, as tea.</p>
-            <p><strong>Contraindications:</strong> Do not combine with Rehmannia glutinosa.</p>
-            <p><strong>Volume:</strong> 20 packets of 1 g each</p>
-            <p><em>Dietary supplement. Not a medicine.</em></p>
-            <p style="color: #8A2BE2; font-style: italic; font-weight: bold;">
-            For circulation support and heart health
-                </p>
-            <a href="https://wa.me/79871149378?text=Hello!%20I%20want%20to%20know%20about%20Danshen%20Powder" class="button">Ask in WhatsApp</a>
-        </div>
-        <div class="product">
-            <img src="https://i.postimg.cc/MZm9KsS7/10.jpg" width="200" height="auto" style="border-radius: 8px;">
-            <h3>Cigarette Filter</h3>
-            <p><strong>Feature:</strong> 17-stage filtration, magnetic system.</p>
-            <p><strong>Quantity:</strong> 20 pcs.</p>
-            <p><em>Smoking accessory. Does not guarantee quitting the habit.</em></p>
-            <p style="color: #8A2BE2; font-style: italic; font-weight: bold;">
-            Smoking accessory with 17-stage filtration
-                </p>
-            <a href="https://wa.me/79871149378?text=Hello!%20I%20want%20to%20know%20about%20Cigarette%20Filter" class="button">Ask in WhatsApp</a>
-        </div>
-        <div class="product">
-            <img src="https://i.postimg.cc/qMBjt8J9/11.jpg" width="200" height="auto" style="border-radius: 8px;">
-            <h3>Salicylic Acid Pore-Refining Cream</h3>
-            <p><strong>Ingredients:</strong> Salicylic acid, glycerin, extracts of aloe and Baikal skullcap.</p>
-            <p><strong>Use:</strong> Apply on clean skin 1–2 times a day.</p>
-            <p><strong>Volume:</strong> 30 g</p>
-            <p><em>Cosmetic product. Do not use if allergic.</em></p>
-            <p style="color: #8A2BE2; font-style: italic; font-weight: bold;">
-             For care of problematic skin and cleansing
-                </p>
-            <a href="https://wa.me/79871149378?text=Hello!%20I%20want%20to%20know%20about%20Salicylic%20Acid%20Pore-Refining%20Cream" class="button">Ask in WhatsApp</a>
-        </div>
-        <div class="product">
-            <img src="https://i.postimg.cc/SNZVcJjj/12.jpg" width="200" height="auto" style="border-radius: 8px;">
-            <h3> Cream For Nail Fungus</h3>
-            <p><strong>Ingredients:</strong> Quince, red flower, dried ginger, chili pepper.</p>
-            <p><strong>Use:</strong> Apply thinly on problem areas.</p>
-            <p><strong>Volume:</strong> 20 g</p>
-            <p><em>For prevention of frostbite.</em></p>
-            <p style="color: #8A2BE2; font-style: italic; font-weight: bold;">
-            Skin Care Cream
-                </p>
-            <a href="https://wa.me/79871149378?text=Hello!%20I%20want%20to%20know%20about%20Anti-Frost%20Cream" class="button">Ask in WhatsApp</a>
-        </div>
-        <div class="product">
-            <img src="https://i.postimg.cc/jSmXkmHb/13.jpg" width="200" height="auto" style="border-radius: 8px;">
-            <h3>Cream for Heel Cracks</h3>
-            <p><strong>Ingredients:</strong> Special oils, moisturizing components.</p>
-            <p><strong>Use:</strong> Apply on clean skin before bedtime.</p>
-            <p><strong>Volume:</strong> 20 g</p>
-            <p><em>Cosmetic product.</em></p>
-            <a href="https://wa.me/79871149378?text=Hello!%20I%20want%20to%20know%20about%20Cream%20for%20Heel%20Cracks" class="button">Ask in WhatsApp</a>
-        </div>
-        <div class="product">
-            <img src="https://i.postimg.cc/wj722gs2/14.jpg" width="200" height="auto" style="border-radius: 8px;">
-            <h3>Azelaic Acid Gel</h3>
-            <p><strong>Ingredients:</strong> Azelaic acid (15%), propylene glycol, glycerin.</p>
-            <p><strong>Use:</strong> Apply 2–3 times a day on problem areas.</p>
-            <p><strong>Volume:</strong> 30 g</p>
-            <p><em>For problem skin. Avoid eye area.</em></p>
-            <p style="color: #8A2BE2; font-style: italic; font-weight: bold;">
-           For care of sensitive and problematic skin
-                </p>
-            <a href="https://wa.me/79871149378?text=Hello!%20I%20want%20to%20know%20about%20Azelaic%20Acid%20Gel" class="button">Ask in WhatsApp</a>
-        </div>
-        <div class="product">
-    <img src="https://i.postimg.cc/L8LD85zT/13-1.jpg" alt="Ginkgo and Jiaogulan Tablets" width="150">
-    <h3>Zhen Yan® Ginkgo Leaf & Jiaogulan Tablets</h3>
-    <p><strong>Composition:</strong> Ginkgo biloba, Jiaogulan, rosehip.</p>
-    <p><strong>Usage:</strong> 3 tablets twice a day.</p>
-    <p><strong>Contraindications:</strong> Not for children, pregnant or breastfeeding women.</p>
-    <p><strong>Quantity:</strong> 60 tablets</p>
-    
-    <p style="color: #8A2BE2; font-style: italic; font-weight: bold;">
-        Supports circulation. For those who care about vascular health.
-    </p>
-    
-    <a href="https://wa.me/79871149378?text=Hello!%20I%20want%20to%20know%20about%20Ginkgo%20tablets" class="whatsapp-btn">Chat on WhatsApp</a>
-</div>
     </main>
+
     <footer>
-        <p>&copy; 2025. All rights reserved.</p>
-        <p>This site is not a pharmacy. Does not replace medical advice.</p>
-        <p>For business matters: <a href="mailto:i.t.t.m@qq.com">i.t.t.m@qq.com</a></p>
+        <p>&copy; 2025 ITKN. All rights reserved.</p>
+        <p>The site is not a pharmacy. Does not replace medical advice.</p>
+        <p>For business inquiries: <a href="mailto:i.t.t.m@qq.com">i.t.t.m@qq.com</a></p>
     </footer>
 </body>
 </html>
-
-
-
-
-
-
-
