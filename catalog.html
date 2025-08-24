@@ -115,6 +115,47 @@
             color: inherit;
         }
 
+        /* Фильтры */
+        .tabs {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .tab-btn {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px 20px;
+            background: #2c5e3c;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .tab-btn:hover {
+            background: #254d32;
+        }
+
+        .tab-btn.active {
+            background: #1e4b2a;
+        }
+
+        /* Товары */
+        .product {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .product img {
+            max-width: 150px;
+            height: auto;
+            border-radius: 8px;
+        }
+
         /* Кнопка WhatsApp */
         .whatsapp-btn {
             display: inline-block;
@@ -148,7 +189,7 @@
 </head>
 <body>
     <header>
-        <h1>Каталог товаров-ITK Health Goods</h1>
+        <h1>Каталог товаров - ITK Health Goods</h1>
         <p>Только легальные БАДы, напитки и косметика</p>
         <a href="en_catalog.html" style="position: absolute; top: 20px; right: 20px; color: #0066cc; text-decoration: none; font-size: 16px;">Eng</a>
     </header>
@@ -162,6 +203,7 @@
     </nav>
 
     <main>
+        <!-- Категории -->
         <div class="categories-section">
             <h2>Выберите категорию</h2>
             <div class="categories-grid"> 
@@ -233,38 +275,56 @@
                 </a>
             </div>
         </div>
+
+        <!-- Фильтры -->
         <div class="tabs">
-    <button class="tab-btn active" onclick="filterCategory('all')">Все</button>
-    <button class="tab-btn" onclick="filterCategory('heart')">Поддержка сердца</button>
-    <button class="tab-btn" onclick="filterCategory('digestion')">Поддержка пищеварения</button>
-    <button class="tab-btn" onclick="filterCategory('nervous')">Нервная система</button>
-    <button class="tab-btn" onclick="filterCategory('immunity')">Иммунитет</button>
-    <button class="tab-btn" onclick="filterCategory('cosmetics')">Косметика</button>
-    <button class="tab-btn" onclick="filterCategory('accessories')">Аксессуары</button>
-</div>
-        <main>
+            <button class="tab-btn active" onclick="filterCategory('all')">Все</button>
+            <button class="tab-btn" onclick="filterCategory('heart')">Поддержка сердца</button>
+            <button class="tab-btn" onclick="filterCategory('digestion')">Поддержка пищеварения</button>
+            <button class="tab-btn" onclick="filterCategory('nervous')">Нервная система</button>
+            <button class="tab-btn" onclick="filterCategory('immunity')">Иммунитет</button>
+            <button class="tab-btn" onclick="filterCategory('cosmetics')">Косметика</button>
+            <button class="tab-btn" onclick="filterCategory('accessories')">Аксессуары</button>
+        </div>
+
+        <!-- Товары -->
         <div class="product" data-category="heart">
-    <img src="https://i.postimg.cc/gjHSCsYK/1.jpg" alt="Чай из красного гороха, риса и семян лотоса" width="150">
-    <h3>赤小豆薏米芡实茶 — Чай из красного гороха, риса и семян лотоса</h3>
-    <p><strong>Состав:</strong> Красный горох, рисовые зародыши, семена лотоса.</p>
-    <p><strong>Применение:</strong> 30–50 г на 300–450 мл кипятка, настаивать 3–6 мин.</p>
-    <p><strong>Хранение:</strong> В сухом месте, при температуре до 25°C.</p>
-    <p><strong>Вес:</strong> 330 г</p>
-    <p><em>Не является лекарственным средством. Не рекомендуется детям до 3 лет.</em></p>
-    <p style="color: #8A2BE2; font-style: italic; font-weight: bold;">
-        Для поддержки пищеварения и естественной детоксикации<br>
-    </p>
-    <a href="https://wa.me/79871149378?text=Здравствуйте!%20Хочу%20узнать%20о%20чай%20из%20красного%20гороха" class="whatsapp-btn">Узнать в WhatsApp</a>
+            <img src="https://i.postimg.cc/gjHSCsYK/1.jpg" alt="Чай из красного гороха, риса и семян лотоса" width="150">
+            <h3>赤小豆薏米芡实茶 — Чай из красного гороха, риса и семян лотоса</h3>
+            <p><strong>Состав:</strong> Красный горох, рисовые зародыши, семена лотоса.</p>
+            <p><strong>Применение:</strong> 30–50 г на 300–450 мл кипятка, настаивать 3–6 мин.</p>
+            <p><strong>Хранение:</strong> В сухом месте, при температуре до 25°C.</p>
+            <p><strong>Вес:</strong> 330 г</p>
+            <p><em>Не является лекарственным средством. Не рекомендуется детям до 3 лет.</em></p>
+            <p style="color: #8A2BE2; font-style: italic; font-weight: bold;">
+                Для поддержки пищеварения и естественной детоксикации
+            </p>
+            <a href="https://wa.me/79871149378?text=Здравствуйте!%20Хочу%20узнать%20о%20чай%20из%20красного%20гороха" class="whatsapp-btn">Узнать в WhatsApp</a>
+        </div>
     </main>
 
     <footer>
-        <p>© 2025 ITTM. Все права защищены.</p>
+        <p>© 2025 ITKN. Все права защищены.</p>
         <p>Сайт не является аптекой. Не заменяет консультацию врача.</p>
         <p>Для деловых вопросов: <a href="mailto:i.t.t.m@qq.com">i.t.t.m@qq.com</a></p>
     </footer>
+
+    <!-- Скрипт для фильтрации -->
+    <script>
+        function filterCategory(category) {
+            const products = document.querySelectorAll('.product');
+            products.forEach(product => {
+                if (category === 'all' || product.getAttribute('data-category') === category) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+
+            // Активация кнопки
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+    </script>
 </body>
 </html>
-
-
-
-
