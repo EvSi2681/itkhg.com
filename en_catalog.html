@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Catalog of Chinese Health Products — ITKHG</title>
+    <title>Catalog of Dietary Supplements and Cosmetics — ITKN</title>
     <meta name="description" content="Catalog of natural dietary supplements, drinks, and cosmetics from China. No medicines."/>
     <link rel="stylesheet" href="styles.css"/>
 
@@ -61,7 +61,6 @@
 
         /* Категории */
         .categories-section {
-            flex: 1;
             padding: 60px 20px;
             max-width: 1000px;
             margin: 0 auto;
@@ -74,10 +73,23 @@
             font-size: 28px;
         }
 
+        /* Сетка: 3 колонки на больших экранах, 1 на мобильных */
         .categories-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 25px;
+        }
+
+        @media (max-width: 768px) {
+            .categories-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .categories-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .category-card {
@@ -115,26 +127,6 @@
             color: inherit;
         }
 
-        /* Кнопка WhatsApp */
-        .whatsapp-btn {
-            display: inline-block;
-            margin: 20px 0;
-            padding: 12px 24px;
-            background-color: #25D366;
-            color: white !important;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            font-family: 'Segoe UI', sans-serif;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: background-color 0.3s ease;
-        }
-
-        .whatsapp-btn:hover {
-            background-color: #128C7E;
-        }
-
         /* Футер */
         footer {
             text-align: center;
@@ -148,7 +140,7 @@
 </head>
 <body>
     <header>
-        <h1>Product Catalog-ITK Health Goods</h1>
+        <h1>Product Catalog - ITK Health Goods</h1>
         <p>Only legal dietary supplements, drinks, and cosmetics</p>
         <a href="catalog.html" style="position: absolute; top: 20px; right: 20px; color: #0066cc; text-decoration: none; font-size: 16px;">Rus</a>
     </header>
@@ -161,6 +153,7 @@
         <a href="en_contacts.html">Contacts</a>
     </nav>
 
+    <!-- Категории -->
     <main>
         <div class="categories-section">
             <h2>Choose a Category</h2>
@@ -236,10 +229,9 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 ITTM. All rights reserved.</p>
+        <p>&copy; 2025 ITKN. All rights reserved.</p>
         <p>The site is not a pharmacy. Does not replace medical advice.</p>
         <p>For business inquiries: <a href="mailto:i.t.t.m@qq.com">i.t.t.m@qq.com</a></p>
     </footer>
 </body>
 </html>
-
