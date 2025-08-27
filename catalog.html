@@ -73,10 +73,23 @@
             font-size: 28px;
         }
 
+        /* Сетка: 3 колонки на больших экранах, 1 на мобильных */
         .categories-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 25px;
+        }
+
+        @media (max-width: 768px) {
+            .categories-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .categories-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .category-card {
@@ -114,67 +127,6 @@
             color: inherit;
         }
 
-        /* Фильтры */
-        .tabs {
-            text-align: center;
-            margin: 30px 0;
-        }
-
-        .tab-btn {
-            display: inline-block;
-            margin: 0 10px;
-            padding: 10px 20px;
-            background: #2c5e3c;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        .tab-btn:hover {
-            background: #254d32;
-        }
-
-        .tab-btn.active {
-            background: #1e4b2a;
-        }
-
-        /* Товары */
-        .product {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .product img {
-            max-width: 150px;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        /* Кнопка WhatsApp */
-        .whatsapp-btn {
-            display: inline-block;
-            margin: 20px 0;
-            padding: 12px 24px;
-            background-color: #25D366;
-            color: white !important;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            font-family: 'Segoe UI', sans-serif;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: background-color 0.3s ease;
-        }
-
-        .whatsapp-btn:hover {
-            background-color: #128C7E;
-        }
-
         /* Футер */
         footer {
             text-align: center;
@@ -202,77 +154,78 @@
     </nav>
 
     <!-- Категории -->
-    <div class="categories-section">
-        <h2>Выберите категорию</h2>
-        <div class="categories-grid"> 
-            <a href="catalog.html#heart">
-                <div class="category-card">
-                    <img src="https://i.postimg.cc/43y2s8Zg/39.1.jpg" alt="Поддержка сердечно-сосудистой системы">
-                    <p>Поддержка сердечно-сосудистой системы</p>
-                </div>
-            </a>
-            <a href="catalog.html#detox">
-                <div class="category-card">
-                    <img src="https://i.postimg.cc/gjHSCsYK/1.jpg" alt="Поддержка пищеварения и детоксикации">
-                    <p>Поддержка пищеварения и детоксикации</p>
-                </div>
-            </a>
-            <a href="catalog.html#urinary">
-                <div class="category-card">
-                    <img src="https://i.postimg.cc/3xG5kYqj/35.jpg" alt="Поддержка мочевыделительной системы">
-                    <p>Поддержка мочевыделительной системы</p>
-                </div>
-            </a>
-            <a href="catalog.html#joints">
-                <div class="category-card">
-                    <img src="https://i.postimg.cc/28pW6xGd/26.jpg" alt="Поддержка опорно-двигательного аппарата">
-                    <p>Поддержка опорно-двигательного аппарата</p>
-                </div>
-            </a>
-            <a href="catalog.html#digestion">
-                <div class="category-card">
-                    <img src="https://i.postimg.cc/3xG5kYqj/35.jpg" alt="Поддержка пищеварения">
-                    <p>Поддержка пищеварения</p>
-                </div>
-            </a>
-            <a href="catalog.html#immunity">
-                <div class="category-card">
-                    <img src="https://i.postimg.cc/28pW6xGd/26.jpg" alt="Поддержка иммунной системы">
-                    <p>Поддержка иммунной системы</p>
-                </div>
-            </a>
-            <a href="catalog.html#nervous">
-                <div class="category-card">
-                    <img src="https://i.postimg.cc/gjHSCsYK/1.jpg" alt="Поддержка нервной системы и спокойствия">
-                    <p>Поддержка нервной системы и спокойствия</p>
-                </div>
-            </a>
-            <a href="catalog.html#metabolism">
-                <div class="category-card">
-                    <img src="https://i.postimg.cc/43y2s8Zg/39.1.jpg" alt="Поддержка липидного и углеводного обмена">
-                    <p>Поддержка липидного и углеводного обмена</p>
-                </div>
-            </a>
-            <a href="catalog.html#men">
-                <div class="category-card">
-                    <img src="https://i.postimg.cc/3xG5kYqj/35.jpg" alt="Поддержка мужского здоровья">
-                    <p>Поддержка мужского здоровья</p>
-                </div>
-            </a>
-            <a href="catalog.html#women">
-                <div class="category-card">
-                    <img src="https://i.postimg.cc/28pW6xGd/26.jpg" alt="Поддержка женского здоровья">
-                    <p>Поддержка женского здоровья</p>
-                </div>
-            </a>
-            <a href="catalog.html#care">
-                <div class="category-card">
-                    <img src="https://i.postimg.cc/gjHSCsYK/1.jpg" alt="Средства для ежедневного ухода и поддержки">
-                    <p>Средства для ежедневного ухода и поддержки</p>
-                </div>
-            </a>
+    <main>
+        <div class="categories-section">
+            <h2>Выберите категорию</h2>
+            <div class="categories-grid"> 
+                <a href="catalog.html#heart">
+                    <div class="category-card">
+                        <img src="https://i.postimg.cc/43y2s8Zg/39.1.jpg" alt="Поддержка сердечно-сосудистой системы">
+                        <p>Поддержка сердечно-сосудистой системы</p>
+                    </div>
+                </a>
+                <a href="catalog.html#detox">
+                    <div class="category-card">
+                        <img src="https://i.postimg.cc/gjHSCsYK/1.jpg" alt="Поддержка пищеварения и детоксикации">
+                        <p>Поддержка пищеварения и детоксикации</p>
+                    </div>
+                </a>
+                <a href="catalog.html#urinary">
+                    <div class="category-card">
+                        <img src="https://i.postimg.cc/3xG5kYqj/35.jpg" alt="Поддержка мочевыделительной системы">
+                        <p>Поддержка мочевыделительной системы</p>
+                    </div>
+                </a>
+                <a href="catalog.html#joints">
+                    <div class="category-card">
+                        <img src="https://i.postimg.cc/28pW6xGd/26.jpg" alt="Поддержка опорно-двигательного аппарата">
+                        <p>Поддержка опорно-двигательного аппарата</p>
+                    </div>
+                </a>
+                <a href="catalog.html#digestion">
+                    <div class="category-card">
+                        <img src="https://i.postimg.cc/3xG5kYqj/35.jpg" alt="Поддержка пищеварения">
+                        <p>Поддержка пищеварения</p>
+                    </div>
+                </a>
+                <a href="catalog.html#immunity">
+                    <div class="category-card">
+                        <img src="https://i.postimg.cc/28pW6xGd/26.jpg" alt="Поддержка иммунной системы">
+                        <p>Поддержка иммунной системы</p>
+                    </div>
+                </a>
+                <a href="catalog.html#nervous">
+                    <div class="category-card">
+                        <img src="https://i.postimg.cc/gjHSCsYK/1.jpg" alt="Поддержка нервной системы и спокойствия">
+                        <p>Поддержка нервной системы и спокойствия</p>
+                    </div>
+                </a>
+                <a href="catalog.html#metabolism">
+                    <div class="category-card">
+                        <img src="https://i.postimg.cc/43y2s8Zg/39.1.jpg" alt="Поддержка липидного и углеводного обмена">
+                        <p>Поддержка липидного и углеводного обмена</p>
+                    </div>
+                </a>
+                <a href="catalog.html#men">
+                    <div class="category-card">
+                        <img src="https://i.postimg.cc/3xG5kYqj/35.jpg" alt="Поддержка мужского здоровья">
+                        <p>Поддержка мужского здоровья</p>
+                    </div>
+                </a>
+                <a href="catalog.html#women">
+                    <div class="category-card">
+                        <img src="https://i.postimg.cc/28pW6xGd/26.jpg" alt="Поддержка женского здоровья">
+                        <p>Поддержка женского здоровья</p>
+                    </div>
+                </a>
+                <a href="catalog.html#care">
+                    <div class="category-card">
+                        <img src="https://i.postimg.cc/gjHSCsYK/1.jpg" alt="Средства для ежедневного ухода и поддержки">
+                        <p>Средства для ежедневного ухода и поддержки</p>
+                    </div>
+                </a>
+            </div>
         </div>
-    </div>
     </main>
 
     <footer>
@@ -280,38 +233,5 @@
         <p>Сайт не является аптекой. Не заменяет консультацию врача.</p>
         <p>Для деловых вопросов: <a href="mailto:i.t.t.m@qq.com">i.t.t.m@qq.com</a></p>
     </footer>
-
-    <!-- Скрипт для фильтрации -->
-    <script>
-        function filterCategory(category) {
-            const products = document.querySelectorAll('.product');
-            products.forEach(product => {
-                if (category === 'all' || product.getAttribute('data-category') === category) {
-                    product.style.display = 'block';
-                } else {
-                    product.style.display = 'none';
-                }
-            });
-
-            // Активация кнопки
-            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-        }
-
-        // Автоматическая фильтрация при загрузке страницы
-        window.onload = function() {
-            const hash = window.location.hash.substring(1); // Получаем #heart → 'heart'
-            if (hash) {
-                filterCategory(hash);
-                // Активируем нужную кнопку
-                const activeBtn = document.querySelector(`.tab-btn[onclick="filterCategory('${hash}')"]`);
-                if (activeBtn) {
-                    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-                    activeBtn.classList.add('active');
-                }
-            }
-        };
-    </script>
 </body>
 </html>
-
