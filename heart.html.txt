@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Поддержка сердечно-сосудистой системы — ITKN</title>
+    <meta name="description" content="Товары для поддержки сердца и сосудов из Китая."/>
+    <link rel="stylesheet" href="styles.css"/>
+
+    <style>
+        /* Общие стили (можно вынести в styles.css) */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            color: #333;
+            background: 
+                linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                url('https://i.postimg.cc/QMsCCbxB/image.png') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #2c5e3c;
+            margin: 0 0 10px 0;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        nav {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #2c5e3c;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .product {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .product img {
+            max-width: 150px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .whatsapp-btn {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 12px 24px;
+            background-color: #25D366;
+            color: white !important;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            font-size: 14px;
+            color: #666;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Поддержка сердечно-сосудистой системы</h1>
+        <p>Товары для кровообращения и здоровья сосудов</p>
+        <a href="en_heart.html" style="position: absolute; top: 20px; right: 20px; color: #0066cc; text-decoration: none; font-size: 16px;">Eng</a>
+    </header>
+
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="request.html">Запрос из Китая</a>
+        <a href="blog.html">Блог</a>
+        <a href="contacts.html">Контакты</a>
+    </nav>
+
+    <main>
+        <!-- Товар 1: Таблетки с гинкго и жоугоулуа -->
+        <div class="product">
+            <img src="images/13.jpg" alt="Таблетки с гинкго и жоугоулуа" width="150">
+            <h3>臻妍®银杏叶绞股蓝片 — Таблетки с гинкго и жоугоулуа</h3>
+            <p><strong>Состав:</strong> Гинкго билоба, жоугоулуа, шиповник.</p>
+            <p><strong>Применение:</strong> 3 таблетки 2 раза в день.</p>
+            <p><strong>Противопоказания:</strong> Детям, беременным, кормящим.</p>
+            <p><strong>Объём:</strong> 60 таблеток</p>
+            <p><em>БАД. Не является лекарством. Для поддержки кровообращения.</em></p>
+            <a href="https://wa.me/79871149378?text=Здравствуйте!%20Хочу%20узнать%20о%20таблетках%20с%20гинкго" class="whatsapp-btn">Узнать в WhatsApp</a>
+        </div>
+
+        <!-- Товар 2: Капсулы с коэнзимом Q10 -->
+        <div class="product">
+            <img src="images/39.jpg" alt="Капсулы с коэнзимом Q10" width="150">
+            <h3>汤恩倍牌辅酶Q10软胶囊 — Капсулы с коэнзимом Q10</h3>
+            <p><strong>Состав:</strong> Коэнзим Q10, соевое масло, желатин.</p>
+            <p><strong>Применение:</strong> 1 капсула 2 раза в день.</p>
+            <p><strong>Противопоказания:</strong> Детям, беременным, кормящим.</p>
+            <p><strong>Объём:</strong> 30 капсул</p>
+            <p><em>БАД. Не является лекарством.</em></p>
+            <a href="https://wa.me/79871149378?text=Здравствуйте!%20Хочу%20узнать%20о%20капсулах%20с%20Q10" class="whatsapp-btn">Узнать в WhatsApp</a>
+        </div>
+
+        <!-- Товар 3: Порошок из дани шэна -->
+        <div class="product">
+            <img src="images/42.jpg" alt="Порошок из дани шэна (Шалфей)" width="150">
+            <h3>丹参破壁饮片 — Порошок из дани шэна (Шалфей)</h3>
+            <p><strong>Состав:</strong> Корень шалфея мускатного.</p>
+            <p><strong>Применение:</strong> 2–6 г в день, как чай.</p>
+            <p><strong>Противопоказания:</strong> Не сочетается с Rehmannia glutinosa.</p>
+            <p><strong>Объём:</strong> 20 пакетиков по 1 г</p>
+            <p><em>БАД. Для сердца и крови.</em></p>
+            <a href="https://wa.me/79871149378?text=Здравствуйте!%20Хочу%20узнать%20о%20порошке%20из%20шалфея" class="whatsapp-btn">Узнать в WhatsApp</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 ITKN. Все права защищены.</p>
+        <p>Сайт не является аптекой. Не заменяет консультацию врача.</p>
+        <p>Для деловых вопросов: <a href="mailto:i.t.t.m@qq.com">i.t.t.m@qq.com</a></p>
+    </footer>
+</body>
+</html>
