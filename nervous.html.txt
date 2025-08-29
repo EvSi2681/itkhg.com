@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Поддержка нервной системы — ITKN</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <style>/* ...общие стили... */</style>
+</head>
+<body>
+    <header>
+        <h1>Поддержка нервной системы и спокойствия</h1>
+        <p>Средства для баланса и спокойствия</p>
+        <a href="en_nervous.html" style="position: absolute; top: 20px; right: 20px; color: #0066cc; text-decoration: none; font-size: 16px;">Eng</a>
+    </header>
+
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="request.html">Запрос из Китая</a>
+        <a href="blog.html">Блог</a>
+        <a href="contacts.html">Контакты</a>
+    </nav>
+
+    <main>
+      <div class="product">
+    <img src="https://i.postimg.cc/3r6FVKyH/7-1.jpg" alt="Специальная диета с глицином" width="150">
+    <h3>甘氨酸特膳 — Специальная диета с глицином</h3>
+    <p><strong>Состав:</strong> Глицин, витамины B1, B2.</p>
+    <p><strong>Применение:</strong> 1-2 таблетки 3 раза в день.</p>
+    <p><strong>Противопоказания:</strong> Детям, беременным, кормящим.</p>
+    <p><strong>Объём:</strong> Уточняйте у менеджера</p>
+    <p><em>БАД. Не является лекарством. Для поддержки мышц и снижения усталости.</em></p>
+    <a href="https://wa.me/79871149378?text=Здравствуйте!%20Хочу%20узнать%20о%20глицине" class="whatsapp-btn">Узнать в WhatsApp</a>
+</div>
+  <div class="product">
+    <img src="https://i.postimg.cc/FKCQQd5Z/19.jpg" alt="Таблетки из сертралина гидрохлорида" width="150">
+    <h3>盐酸舍曲林片 — Таблетки из сертралина гидрохлорида</h3>
+    <p><strong>Состав:</strong> Сертралин.</p>
+    <p><strong>Применение:</strong> Принимать по назначению врача.</p>
+    <p><strong>Противопоказания:</strong> Детям, беременным, кормящим.</p>
+    <p><strong>Объём:</strong> Уточняйте у менеджера</p>
+    <p><em>БАД. Не является лекарством. Для поддержки психики.</em></p>
+    <a href="https://wa.me/79871149378?text=Здравствуйте!%20Хочу%20узнать%20о%20таблетках%20из%20сертралина" class="whatsapp-btn">Узнать в WhatsApp</a>
+</div>
+<div class="product">
+    <img src="https://i.postimg.cc/sx7FSTB6/20.jpg" alt="Таблетки из сертралина гидрохлорида (Viatris)" width="150">
+    <h3>盐酸舍曲林片 VIATRIS — Таблетки из сертралина гидрохлорида (Viatris)</h3>
+    <p><strong>Состав:</strong> Сертралин.</p>
+    <p><strong>Применение:</strong> Принимать по назначению врача.</p>
+    <p><strong>Противопоказания:</strong> Детям, беременным, кормящим.</p>
+    <p><strong>Объём:</strong> Уточняйте у менеджера</p>
+    <p><em>БАД. Не является лекарством. Для поддержки психики.</em></p>
+    <a href="https://wa.me/79871149378?text=Здравствуйте!%20Хочу%20узнать%20о%20таблетках%20сертралина%20Viatris" class="whatsapp-btn">Узнать в WhatsApp</a>
+</div>
+    </main>
+
+    <footer>
+        <p>© 2025 ITKN. Все права защищены.</p>
+        <p>Сайт не является аптекой. Не заменяет консультацию врача.</p>
+        <p>Для деловых вопросов: <a href="mailto:i.t.t.m@qq.com">i.t.t.m@qq.com</a></p>
+    </footer>
+</body>
+</html>
