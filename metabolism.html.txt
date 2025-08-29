@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Поддержка липидного и углеводного обмена — ITKN</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <style>/* ...общие стили... */</style>
+</head>
+<body>
+    <header>
+        <h1>Поддержка липидного и углеводного обмена</h1>
+        <p>Антиоксиданты и БАДы для баланса</p>
+        <a href="en_metabolism.html" style="position: absolute; top: 20px; right: 20px; color: #0066cc; text-decoration: none; font-size: 16px;">Eng</a>
+    </header>
+
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="request.html">Запрос из Китая</a>
+        <a href="blog.html">Блог</a>
+        <a href="contacts.html">Контакты</a>
+    </nav>
+
+    <main>
+        <div class="product">
+    <img src="https://i.postimg.cc/7LsKLSL5/9.jpg" alt="Напиток из воды и дерева" width="150">
+    <h3>水木饮 — Напиток из воды и дерева</h3>
+    <p><strong>Состав:</strong> Ге-ген, пептиды кукурузы, женьшень.</p>
+    <p><strong>Применение:</strong> 1 пакетик 2 раза в день.</p>
+    <p><strong>Противопоказания:</strong> Детям, беременным, кормящим.</p>
+    <p><strong>Объём:</strong> Уточняйте у менеджера</p>
+    <p><em>БАД. Не является лекарством. Для поддержки мозга и сердца.</em></p>
+    <a href="https://wa.me/79871149378?text=Здравствуйте!%20Хочу%20узнать%20о%20напитке%20вода%20и%20дерево" class="whatsapp-btn">Узнать в WhatsApp</a>
+</div>
+    </main>
+
+    <footer>
+        <p>© 2025 ITKN. Все права защищены.</p>
+        <p>Сайт не является аптекой. Не заменяет консультацию врача.</p>
+        <p>Для деловых вопросов: <a href="mailto:i.t.t.m@qq.com">i.t.t.m@qq.com</a></p>
+    </footer>
+</body>
+</html>
