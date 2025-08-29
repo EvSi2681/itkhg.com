@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Поддержка сердечно-сосудистой системы — ITKN</title>
+    <meta name="description" content="Товары для поддержки сердца и сосудов из Китая."/>
+    <link rel="stylesheet" href="styles.css"/>
+
+    <style>
+        /* Общие стили (можно вынести в styles.css) */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            color: #333;
+            background: 
+                linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                url('https://i.postimg.cc/QMsCCbxB/image.png') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #2c5e3c;
+            margin: 0 0 10px 0;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        nav {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #2c5e3c;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .product {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .product img {
+            max-width: 150px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .whatsapp-btn {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 12px 24px;
+            background-color: #25D366;
+            color: white !important;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            font-size: 14px;
+            color: #666;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Поддержка сердечно-сосудистой системы</h1>
+        <p>Товары для кровообращения и здоровья сосудов</p>
+        <a href="en_heart.html" style="position: absolute; top: 20px; right: 20px; color: #0066cc; text-decoration: none; font-size: 16px;">Eng</a>
+    </header>
+
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="request.html">Запрос из Китая</a>
+        <a href="blog.html">Блог</a>
+        <a href="contacts.html">Контакты</a>
+    </nav>
+
+    <main>
+        <div class="product">
+    <img src="https://i.postimg.cc/NMbBFJH1/13.jpg" alt="Таблетки из листьев гинкго и женьшеня" width="150">
+    <h3>银杏叶绞股蓝片 — Таблетки из листьев гинкго и женьшеня</h3>
+    <p><strong>Состав:</strong> Листья гинкго, женьшень жоугоулуа.</p>
+    <p><strong>Применение:</strong> 2 таблетки 2 раза в день.</p>
+    <p><strong>Противопоказания:</strong> Детям, беременным, кормящим.</p>
+    <p><strong>Объём:</strong> Уточняйте у менеджера</p>
+    <p><em>БАД. Не является лекарством. Для поддержки кровообращения.</em></p>
+    <a href="https://wa.me/79871149378?text=Здравствуйте!%20Хочу%20узнать%20о%20таблетках%20с%20гинкго" class="whatsapp-btn">Узнать в WhatsApp</a>
+</div>
+<div class="product">
+    <img src="https://i.postimg.cc/BbypC3F4/4.jpg" alt="Быстродействующие пилюли для спасения сердца" width="150">
+    <h3>速效救心丸 — Быстродействующие пилюли для спасения сердца</h3>
+    <p><strong>Состав:</strong> Буплерум, циперус, лигустикум.</p>
+    <p><strong>Применение:</strong> 4-6 пилюль под язык при необходимости.</p>
+    <p><strong>Противопоказания:</strong> Детям, беременным, кормящим.</p>
+    <p><strong>Объём:</strong> Уточняйте у менеджера</p>
+    <p><em>БАД. Не является лекарством. Для поддержки сердца и мозга.</em></p>
+    <a href="https://wa.me/79871149378?text=Здравствуйте!%20Хочу%20узнать%20о%20быстродействующих%20пилюлях%20для%20сердца" class="whatsapp-btn">Узнать в WhatsApp</a>
+</div>
+<div class="product">
+    <img src="https://i.postimg.cc/NMbBFJH1/13.jpg" alt="Таблетки из листьев гинкго и женьшеня" width="150">
+    <h3>银杏叶绞股蓝片 — Таблетки из листьев гинкго и женьшеня</h3>
+    <p><strong>Состав:</strong> Листья гинкго, женьшень жоугоулуа.</p>
+    <p><strong>Применение:</strong> 2 таблетки 2 раза в день.</p>
+    <p><strong>Противопоказания:</strong> Детям, беременным, кормящим.</p>
+    <p><strong>Объём:</strong> Уточняйте у менеджера</p>
+    <p><em>БАД. Не является лекарством. Для поддержки кровообращения.</em></p>
+    <a href="https://wa.me/79871149378?text=Здравствуйте!%20Хочу%20узнать%20о%20таблетках%20с%20гинкго" class="whatsapp-btn">Узнать в WhatsApp</a>
+</div>
+<div class="product">
+    <img src="https://i.postimg.cc/15MSKYC2/21.jpg" alt="Таблетки из амлодипина бензатата" width="150">
+    <h3>苯磺酸氨氯地平片 — Таблетки из амлодипина бензатата</h3>
+    <p><strong>Состав:</strong> Амлодипин.</p>
+    <p><strong>Применение:</strong> Принимать по назначению врача.</p>
+    <p><strong>Противопоказания:</strong> Детям, беременным, кормящим.</p>
+    <p><strong>Объём:</strong> Уточняйте у менеджера</p>
+    <p><em>БАД. Не является лекарством. Для поддержки сердца и мозга.</em></p>
+    <a href="https://wa.me/79871149378?text=Здравствуйте!%20Хочу%20узнать%20о%20таблетках%20амлодипина" class="whatsapp-btn">Узнать в WhatsApp</a>
+</div>
+<div class="product">
+    <img src="https://i.postimg.cc/BZBfqV0b/22.jpg" alt="Таблетки из амлодипина бензатата (Ningbo Dahongying)" width="150">
+    <h3>苯磺酸氨氯地平片 (Ningbo Dahongying) — Таблетки из амлодипина бензатата (Ningbo Dahongying)</h3>
+    <p><strong>Состав:</strong> Амлодипин.</p>
+    <p><strong>Применение:</strong> Принимать по назначению врача.</p>
+    <p><strong>Противопоказания:</strong> Детям, беременным, кормящим.</p>
+    <p><strong>Объём:</strong> Уточняйте у менеджера</p>
+    <p><em>БАД. Не является лекарством. Для поддержки сердца и мозга.</em></p>
+    <a href="https://wa.me/79871149378?text=Здравствуйте!%20Хочу%20узнать%20о%20таблетках%20амлодипина%20Ningbo" class="whatsapp-btn">Узнать в WhatsApp</a>
+</div>
+<div class="product">
+    <img src="https://i.postimg.cc/66MBXpnT/39.jpg" alt="Мягкие капсулы с коэнзимом Q10" width="150">
+    <h3>辅酶Q10软胶囊 — Мягкие капсулы с коэнзимом Q10</h3>
+    <p><strong>Состав:</strong> Коэнзим Q10.</p>
+    <p><strong>Применение:</strong> 1 капсула 1 раз в день.</p>
+    <p><strong>Противопоказания:</strong> Детям, беременным, кормящим.</p>
+    <p><strong>Объём:</strong> Уточняйте у менеджера</p>
+    <p><em>БАД. Не является лекарством. Для поддержки иммунитета.</em></p>
+    <a href="https://wa.me/79871149378?text=Здравствуйте!%20Хочу%20узнать%20о%20коэнзиме%20Q10" class="whatsapp-btn">Узнать в WhatsApp</a>
+</div>
+<div class="product">
+    <img src="https://i.postimg.cc/v82wKSwV/42.jpg" alt="Чай из шалфея" width="150">
+    <h3>丹参破壁饮片 — Чай из шалфея</h3>
+    <p><strong>Состав:</strong> Шалфей.</p>
+    <p><strong>Применение:</strong> 1 пакетик 2 раза в день.</p>
+    <p><strong>Противопоказания:</strong> Детям, беременным, кормящим.</p>
+    <p><strong>Объём:</strong> Уточняйте у менеджера</p>
+    <p><em>БАД. Не является лекарством. Для поддержки мозга и сердца.</em></p>
+    <a href="https://wa.me/79871149378?text=Здравствуйте!%20Хочу%20узнать%20о%20чае%20из%20шалфея" class="whatsapp-btn">Узнать в WhatsApp</a>
+</div>
+    </main>
+
+    <footer>
+        <p>© 2025 ITKN. Все права защищены.</p>
+        <p>Сайт не является аптекой. Не заменяет консультацию врача.</p>
+        <p>Для деловых вопросов: <a href="mailto:i.t.t.m@qq.com">i.t.t.m@qq.com</a></p>
+    </footer>
+</body>
+</html>
