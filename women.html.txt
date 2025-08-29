@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Поддержка женского здоровья — ITKN</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <style>/* ...общие стили... */</style>
+</head>
+<body>
+    <header>
+        <h1>Поддержка женского здоровья</h1>
+        <p>Средства для ухода и баланса</p>
+        <a href="en_women.html" style="position: absolute; top: 20px; right: 20px; color: #0066cc; text-decoration: none; font-size: 16px;">Eng</a>
+    </header>
+
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="request.html">Запрос из Китая</a>
+        <a href="blog.html">Блог</a>
+        <a href="contacts.html">Контакты</a>
+    </nav>
+
+    <main>
+        <div class="product">
+    <img src="https://i.postimg.cc/mgR43WyQ/17.jpg" alt="Лазерное устройство для очистки ногтей от грибка" width="150">
+    <h3>Nail Fungus Cleaning Laser Device — Лазерное устройство для очистки ногтей от грибка</h3>
+    <p><strong>Состав:</strong> Лазер, батарея.</p>
+    <p><strong>Применение:</strong> Использовать по инструкции 1 раз в день.</p>
+    <p><strong>Противопоказания:</strong> Детям, беременным, кормящим.</p>
+    <p><strong>Объём:</strong> Уточняйте у менеджера</p>
+    <p><em>БАД. Не является лекарством. Для поддержки здоровья ногтей.</em></p>
+    <a href="https://wa.me/79871149378?text=Здравствуйте!%20Хочу%20узнать%20о%20лазерном%20устройстве%20от%20грибка" class="whatsapp-btn">Узнать в WhatsApp</a>
+</div>
+<div class="product">
+    <img src="https://i.postimg.cc/mkXdPMjX/28.jpg" alt="Гель с снежной лилией и куши для подавления бактерий" width="150">
+    <h3>莘护®雪莲苦参抑菌凝胶 — Гель с снежной лилией и куши для подавления бактерий</h3>
+    <p><strong>Состав:</strong> Снежная лилия, куша.</p>
+    <p><strong>Применение:</strong> Использовать по инструкции.</p>
+    <p><strong>Противопоказания:</strong> Детям, беременным, кормящим.</p>
+    <p><strong>Объём:</strong> Уточняйте у менеджера</p>
+    <p><em>БАД. Не является лекарством. Для поддержки женского здоровья.</em></p>
+    <a href="https://wa.me/79871149378?text=Здравствуйте!%20Хочу%20узнать%20о%20геле%20с%20снежной%20лилией" class="whatsapp-btn">Узнать в WhatsApp</a>
+</div>
+    </main>
+
+    <footer>
+        <p>© 2025 ITKN. Все права защищены.</p>
+        <p>Сайт не является аптекой. Не заменяет консультацию врача.</p>
+        <p>Для деловых вопросов: <a href="mailto:i.t.t.m@qq.com">i.t.t.m@qq.com</a></p>
+    </footer>
+</body>
+</html>
