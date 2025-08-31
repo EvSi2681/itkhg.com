@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Современная медицина в Китае — ITKN</title>
+    <meta name="description" content="Как лечатся жители Китая. Обзор популярных лекарственных средств."/>
+    <link rel="stylesheet" href="styles.css"/>
+
+    <style>
+        /* Общие стили */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            color: #333;
+            background: 
+                linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                url('https://i.postimg.cc/QMsCCbxB/image.png') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #2c5e3c;
+            margin: 0 0 10px 0;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        /* Навигация */
+        nav {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #2c5e3c;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Статья */
+        .article {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 25px;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .article h2 {
+            color: #2c5e3c;
+            text-align: center;
+        }
+
+        .article p {
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .med-list {
+            max-width: 800px;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .med-item {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #ddd;
+        }
+
+        .med-item h4 {
+            color: #2c5e3c;
+            margin-bottom: 8px;
+        }
+
+        .med-item p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .disclaimer {
+            text-align: center;
+            font-style: italic;
+            color: #666;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+
+        /* Футер */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            font-size: 14px;
+            color: #666;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Современная медицина в Китае</h1>
+        <p>Как лечатся жители Поднебесной</p>
+        <a href="en_medicine_in_china.html" style="position: absolute; top: 20px; right: 20px; color: #0066cc; text-decoration: none; font-size: 16px;">Eng</a>
+    </header>
+
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="request.html">Запрос из Китая</a>
+        <a href="blog.html">Блог</a>
+        <a href="contacts.html">Контакты</a>
+    </nav>
+
+    <main>
+        <div class="article">
+            <h2>Современная медицина в Китае: как лечатся жители Поднебесной</h2>
+
+            <p>Когда мы думаем о Китае, на ум приходят традиционные методы лечения: иглоукалывание, травы, цигун. Но за этим образом скрывается <strong>современная, высокотехнологичная медицинская система</strong>, которая во многом опережает западную.</p>
+
+            <p>В Китае <strong>современная (европейская) медицина</strong> — это не просто дополнение к традициям, а <strong>основной способ лечения</strong>. Жители Китая с доверием относятся к научно доказанным препаратам, которые разрабатываются по тем же стандартам, что и в Европе и США.</p>
+
+            <p>Крупные китайские фармацевтические компании, такие как <strong>Shanghai Fosun Pharmaceutical</strong>, <strong>Sinopharm</strong> и <strong>Hengrui Medicine</strong>, производят миллионы упаковок лекарств, которые используются в госпиталях и аптеках по всей стране.</p>
+
+            <p>Эти препараты назначаются врачами при самых разных состояниях — от простуды до хронических заболеваний. Они проходят клинические испытания, имеют регистрацию и строго контролируются.</p>
+
+            <p>Ниже — <strong>обзор некоторых из наиболее популярных и эффективных лекарств</strong>, которые широко используются в современной китайской медицине. Этот материал носит <strong>исключительно информационный характер</strong> и не является рекомендацией к применению.</p>
+        </div>
+
+        <div class="med-list">
+            <h3>Популярные лекарства в современной китайской медицине</h3>
+
+            <div class="med-item">
+                <h4>速效救心丸 (Suxiao Jiuxin Wan)</h4>
+                <p><strong>Назначение:</strong> Для экстренной помощи при стенокардии.</p>
+                <p><strong>Действие:</strong> Быстро расширяет коронарные артерии, улучшает кровообращение в сердце.</p>
+                <p><strong>Аналог в РФ:</strong> Нитроглицерин.</p>
+            </div>
+
+            <div class="med-item">
+                <h4>苯磺酸氨氯地平片 (Amlodipine Besylate)</h4>
+                <p><strong>Назначение:</strong> Лечение артериальной гипертензии и стенокардии.</p>
+                <p><strong>Действие:</strong> Расслабляет гладкую мускулатуру сосудов, снижает давление.</p>
+                <p><strong>Аналог в РФ:</strong> Норваск, Амлодипин.</p>
+            </div>
+
+            <div class="med-item">
+                <h4>甲巯咪唑片 (Thiamazole)</h4>
+                <p><strong>Назначение:</strong> Лечение гипертиреоза (повышенной функции щитовидной железы).</p>
+                <p><strong>Действие:</strong> Уменьшает выработку гормонов щитовидной железы.</p>
+                <p><strong>Аналог в РФ:</strong> Мерказолил.</p>
+            </div>
+
+            <div class="med-item">
+                <h4>盐酸舍曲林片 (Sertraline Hydrochloride)</h4>
+                <p><strong>Назначение:</strong> Лечение депрессии, тревожных расстройств, ОКР.</p>
+                <p><strong>Действие:</strong> Ингибитор обратного захвата серотонина (СИОЗС).</p>
+                <p><strong>Аналог в РФ:</strong> Золофт.</p>
+            </div>
+
+            <div class="med-item">
+                <h4>蒙脱石散 (Montmorillonite Powder)</h4>
+                <p><strong>Назначение:</strong> Лечение диареи (поноса).</p>
+                <p><strong>Действие:</strong> Обволакивает слизистую кишечника, абсорбирует токсины.</p>
+                <p><strong>Аналог в РФ:</strong> Смекта.</p>
+            </div>
+
+            <div class="med-item">
+                <h4>京都念慈菴蜜炼川贝枇杷膏 (Beichuan Pipa Gao)</h4>
+                <p><strong>Назначение:</strong> Симптоматическое лечение кашля и заболеваний верхних дыхательных путей.</p>
+                <p><strong>Действие:</strong> Отхаркивающее, противокашлевое, увлажняющее.</p>
+                <p><strong>Аналог в РФ:</strong> Гербион, Стоптуссин.</p>
+            </div>
+        </div>
+
+        <div class="disclaimer">
+            <p><em><strong>Важно:</strong> Этот материал носит исключительно информационный характер. Все лекарства должны назначаться только врачом. Мы не продаём лекарственные средства. Не занимайтесь самолечением.</em></p>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 ITKN. Все права защищены.</p>
+        <p>Сайт не является аптекой. Не заменяет консультацию врача.</p>
+        <p>Для деловых вопросов: <a href="mailto:i.t.t.m@qq.com">i.t.t.m@qq.com</a></p>
+    </footer>
+</body>
+</html>
