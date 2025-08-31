@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Daily Care and Support — ITKN</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <style> 
+            body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            color: #333;
+            background: 
+                linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                url('https://i.postimg.cc/QMsCCbxB/image.png') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #2c5e3c;
+            margin: 0 0 10px 0;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        nav {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #2c5e3c;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .product {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .product img {
+            max-width: 150px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .whatsapp-btn {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 12px 24px;
+            background-color: #25D366;
+            color: white !important;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            font-size: 14px;
+            color: #666;
+            margin-top: auto;
+        }
+</style>
+</head>
+<body>
+    <header>
+        <h1>Daily Care and Support</h1>
+        <p>Accessories and cosmetics</p>
+        <a href="care.html" style="position: absolute; top: 20px; right: 20px; color: #0066cc; text-decoration: none; font-size: 16px;">Rus</a>
+    </header>
+
+    <nav>
+        <a href="en_index.html">Home</a>
+        <a href="en_catalog.html">Catalog</a>
+        <a href="en_request.html">Request from China</a>
+        <a href="en_blog.html">Blog</a>
+        <a href="en_medicine_in_china.html">Modern Medicine in China</a>
+        <a href="en_contacts.html">Contacts</a>
+    </nav>
+
+    <main>
+        <div class="product">
+    <img src="https://i.postimg.cc/c4L2d1hk/25.jpg" alt="Desonide cream" width="150">
+    <h3>Di Nai De Ru Gao — Desonide cream</h3>
+    <p><strong>Composition:</strong> Desonide.</p>
+    <p><strong>Usage:</strong> Apply a thin layer 1-2 times a day.</p>
+    <p><em>Dietary supplement. Not a medical treatment.</em></p>
+    <a href="https://wa.me/79871149378?text=Hello!%20I%20want%20to%20know%20about%20the%20desonide%20cream" class="whatsapp-btn">Chat on WhatsApp</a>
+</div>
+<div class="product">
+    <img src="https://i.postimg.cc/kXYZGrhJ/26.jpg" alt="Salicylic acid pore-refining cream" width="150">
+    <h3>Shui Yang Suan Xi Zhi Mao Kong Shuang — Salicylic acid pore-refining cream</h3>
+    <p><strong>Composition:</strong> Salicylic acid, aloe vera.</p>
+    <p><strong>Usage:</strong> Apply to cleansed face 1 time a day.</p>
+    <p><em>Dietary supplement. Not a medical treatment.</em></p>
+    <a href="https://wa.me/79871149378?text=Hello!%20I%20want%20to%20know%20about%20the%20salicylic%20acid%20cream" class="whatsapp-btn">Chat on WhatsApp</a>
+</div>
+<div class="product">
+    <img src="https://i.postimg.cc/GpT4BsPM/34.jpg" alt="Ointment for heel cracks" width="150">
+    <h3>Fang Dong Bao Jian Gao — Ointment for heel cracks</h3>
+    <p><strong>Composition:</strong> Safflower, mugwort.</p>
+    <p><strong>Usage:</strong> Apply to clean heels at night.</p>
+    <p><em>Dietary supplement. Not a medical treatment.</em></p>
+    <a href="https://wa.me/79871149378?text=Hello!%20I%20want%20to%20know%20about%20the%20ointment%20for%20heel%20cracks" class="whatsapp-btn">Chat on WhatsApp</a>
+</div>
+<div class="product">
+    <img src="https://i.postimg.cc/PrfNW7zv/35.jpg" alt="Nail fungus removal solution" width="150">
+    <h3>Qian Shi Hui Jia — Nail fungus removal solution</h3>
+    <p><strong>Composition:</strong> Mugwort, tu fu ling, bai xian pi.</p>
+    <p><strong>Usage:</strong> Apply to the affected nail 2 times a day.</p>
+    <p><em>Dietary supplement. Not a medical treatment.</em></p>
+    <a href="https://wa.me/79871149378?text=Hello!%20I%20want%20to%20know%20about%20the%20nail%20fungus%20removal%20solution" class="whatsapp-btn">Chat on WhatsApp</a>
+</div>
+<div class="product">
+    <img src="https://i.postimg.cc/4xDJS2t5/37.jpg" alt="Mole removal ointment" width="150">
+    <h3>Dian Zhi Bao Jian Gao — Mole removal ointment</h3>
+    <p><strong>Composition:</strong> San qi, safflower, chuan xiong.</p>
+    <p><strong>Usage:</strong> Apply pointwise to the mole 1 time a day.</p>
+    <p><em>Dietary supplement. Not a medical treatment.</em></p>
+    <a href="https://wa.me/79871149378?text=Hello!%20I%20want%20to%20know%20about%20the%20mole%20removal%20ointment" class="whatsapp-btn">Chat on WhatsApp</a>
+</div>
+
+<div class="product">
+    <img src="https://i.postimg.cc/wM4zcwgD/38.jpg" alt="Wart removal ointment" width="150">
+    <h3>Cao Ben Ke You Gao — Wart removal ointment</h3>
+    <p><strong>Composition:</strong> Zi cao, da ye qing, jin yin hua.</p>
+    <p><strong>Usage:</strong> Apply to the wart 2 times a day.</p>
+    <p><em>Dietary supplement. Not a medical treatment.</em></p>
+    <a href="https://wa.me/79871149378?text=Hello!%20I%20want%20to%20know%20about%20the%20wart%20removal%20ointment" class="whatsapp-btn">Chat on WhatsApp</a>
+</div>
+<div class="product">
+    <img src="https://i.postimg.cc/Pxf0316y/43.jpg" alt="Bee wax ointment for heel cracks" width="150">
+    <h3>Lie Bao Feng Xia Yi Jun Gao — Bee wax ointment for heel cracks</h3>
+    <p><strong>Composition:</strong> Bee wax.</p>
+    <p><strong>Usage:</strong> Apply to clean heels at night.</p>
+    <p><em>Dietary supplement. Not a medical treatment.</em></p>
+    <a href="https://wa.me/79871149378?text=Hello!%20I%20want%20to%20know%20about%20the%20bee%20wax%20ointment" class="whatsapp-btn">Chat on WhatsApp</a>
+</div>
+<div class="product">
+    <img src="https://i.postimg.cc/4dxjLJY9/14.jpg" alt="Moisture and toxin-clearing ointment" width="150">
+    <h3>Shi Du Qing Ruan Gao — Moisture and toxin-clearing ointment</h3>
+    <p><strong>Composition:</strong> Bai xian pi, huang bai, she chuang zi.</p>
+    <p><strong>Usage:</strong> Apply to the affected area 2 times a day.</p>
+    <p><em>Dietary supplement. Not a medical treatment.</em></p>
+    <a href="https://wa.me/79871149378?text=Hello!%20I%20want%20to%20know%20about%20the%20moisture%20and%20toxin%20ointment" class="whatsapp-btn">Chat on WhatsApp</a>
+</div>
+<div class="product">
+    <img src="https://i.postimg.cc/ncX2dX0x/30.jpg" alt="Corn removal patch" width="150">
+    <h3>Ji Yan (You) Kang Tie — Corn removal patch</h3>
+    <p><strong>Composition:</strong> Aloe vera.</p>
+    <p><strong>Usage:</strong> Apply to the corn for 48 hours.</p>
+    <p><em>Dietary supplement. Not a medical treatment.</em></p>
+    <a href="https://wa.me/79871149378?text=Hello!%20I%20want%20to%20know%20about%20the%20corn%20removal%20patch" class="whatsapp-btn">Chat on WhatsApp</a>
+</div>
+<div class="product">
+    <img src="https://i.postimg.cc/wMwq46cy/36.jpg" alt="15% azelaic acid gel" width="150">
+    <h3>Ri Er Suan 15% — 15% azelaic acid gel</h3>
+    <p><strong>Composition:</strong> Azelaic acid, aloe vera.</p>
+    <p><strong>Usage:</strong> Apply a thin layer to affected areas 2 times a day.</p>
+    <p><em>Dietary supplement. Not a medical treatment.</em></p>
+    <a href="https://wa.me/79871149378?text=Hello!%20I%20want%20to%20know%20about%20the%2015%25%20azelaic%20acid%20gel" class="whatsapp-btn">Chat on WhatsApp</a>
+</div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ITKN. All rights reserved.</p>
+        <p>The site is not a pharmacy. Does not replace medical advice.</p>
+        <p>For business inquiries: <a href="mailto:i.t.t.m@qq.com">i.t.t.m@qq.com</a></p>
+    </footer>
+</body>
+</html>
