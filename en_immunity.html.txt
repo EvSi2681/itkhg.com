@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Immune System Support — ITKN</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <style>
+body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            color: #333;
+            background: 
+                linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                url('https://i.postimg.cc/QMsCCbxB/image.png') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #2c5e3c;
+            margin: 0 0 10px 0;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        nav {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #2c5e3c;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .product {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .product img {
+            max-width: 150px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .whatsapp-btn {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 12px 24px;
+            background-color: #25D366;
+            color: white !important;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            font-size: 14px;
+            color: #666;
+            margin-top: auto;
+        }
+</style>
+</head>
+<body>
+    <header>
+        <h1>Immune System Support</h1>
+        <p>Products for body strengthening</p>
+        <a href="immunity.html" style="position: absolute; top: 20px; right: 20px; color: #0066cc; text-decoration: none; font-size: 16px;">Rus</a>
+    </header>
+
+    <nav>
+        <a href="en_index.html">Home</a>
+        <a href="en_catalog.html">Catalog</a>
+        <a href="en_request.html">Request from China</a>
+        <a href="en_blog.html">Blog</a>
+        <a href="en_medicine_in_china.html">Modern Medicine in China</a>
+        <a href="en_contacts.html">Contacts</a>
+    </nav>
+
+    <main>
+       <div class="product">
+    <img src="https://i.postimg.cc/9QwSK8XL/2-3.jpg" alt="Original sea cucumber juice" width="150">
+    <h3>Hai Shen Yuan Jiang — Original sea cucumber juice</h3>
+    <p><strong>Composition:</strong> Sea cucumber, goji berry, dates.</p>
+    <p><strong>Usage:</strong> 1 measuring spoon 2 times a day.</p>
+    <p><em>Dietary supplement. Not a medical treatment.</em></p>
+    <a href="https://wa.me/79871149378?text=Hello!%20I%20want%20to%20know%20about%20the%20sea%20cucumber%20juice" class="whatsapp-btn">Chat on WhatsApp</a>
+</div>
+
+<div class="product">
+    <img src="https://i.postimg.cc/rw4nQDgb/3-3.jpg" alt="Original American ginseng juice" width="150">
+    <h3>Xi Yang Shen Yuan Jiang — Original American ginseng juice</h3>
+    <p><strong>Composition:</strong> American ginseng, goji berry, dates, mulberry.</p>
+    <p><strong>Usage:</strong> 1 measuring spoon 2 times a day.</p>
+    <p><em>Dietary supplement. Not a medical treatment.</em></p>
+    <a href="https://wa.me/79871149378?text=Hello!%20I%20want%20to%20know%20about%20the%20American%20ginseng%20juice" class="whatsapp-btn">Chat on WhatsApp</a>
+</div>
+ <div class="product">
+    <img src="https://i.postimg.cc/0NfCBDSt/5.jpg" alt="Oral transfer factor solution" width="150">
+    <h3>Zhuan Yi Zi Koufu Rongye — Oral transfer factor solution</h3>
+    <p><strong>Composition:</strong> Transfer factor, herbs.</p>
+    <p><strong>Usage:</strong> 10 ml 2 times a day.</p>
+    <p><em>Dietary supplement. Not a medical treatment.</em></p>
+    <a href="https://wa.me/79871149378?text=Hello!%20I%20want%20to%20know%20about%20the%20transfer%20factor%20solution" class="whatsapp-btn">Chat on WhatsApp</a>
+</div>
+<div class="product">
+    <img src="https://i.postimg.cc/fR77Vm8w/8.jpg" alt="Compound amino acid capsules (8-11)" width="150">
+    <h3>Fufang Aminosuan Jiaonang — Compound amino acid capsules (8-11)</h3>
+    <p><strong>Composition:</strong> Amino acids, vitamins A, D2, B1, B2, C, E, B6, B12.</p>
+    <p><strong>Usage:</strong> 1 capsule 2 times a day.</p>
+    <p><em>Dietary supplement. Not a medical treatment.</em></p>
+    <a href="https://wa.me/79871149378?text=Hello!%20I%20want%20to%20know%20about%20the%20amino%20acid%20capsules" class="whatsapp-btn">Chat on WhatsApp</a>
+</div>
+<div class="product">
+    <img src="https://i.postimg.cc/nh6zfP4r/12.jpg" alt="Whole tianma capsules" width="150">
+    <h3>Quan Tianma Jiaonang — Whole tianma capsules</h3>
+    <p><strong>Composition:</strong> Tianma.</p>
+    <p><strong>Usage:</strong> 2 capsules 2 times a day.</p>
+    <p><em>Dietary supplement. Not a medical treatment.</em></p>
+    <a href="https://wa.me/79871149378?text=Hello!%20I%20want%20to%20know%20about%20the%20tianma%20capsules" class="whatsapp-btn">Chat on WhatsApp</a>
+</div>
+<div class="product">
+    <img src="https://i.postimg.cc/T2LTf9PW/15.jpg" alt="Whole tianma capsules №2" width="150">
+    <h3>Quan Tianma Jiaonang №2 — Whole tianma capsules №2</h3>
+    <p><strong>Composition:</strong> Tianma.</p>
+    <p><strong>Usage:</strong> 2 capsules 2 times a day.</p>
+    <p><em>Dietary supplement. Not a medical treatment.</em></p>
+    <a href="https://wa.me/79871149378?text=Hello!%20I%20want%20to%20know%20about%20the%20tianma%20capsules%20№2" class="whatsapp-btn">Chat on WhatsApp</a>
+</div>
+<div class="product">
+    <img src="https://i.postimg.cc/XvY0hKhq/18.jpg" alt="Methimazole tablets" width="150">
+    <h3>Jia Qiu Mi Zuo Pian — Methimazole tablets</h3>
+    <p><strong>Composition:</strong> Methimazole.</p>
+    <p><strong>Usage:</strong> Take as directed by a doctor.</p>
+    <p><em>Dietary supplement. Not a medical treatment.</em></p>
+    <a href="https://wa.me/79871149378?text=Hello!%20I%20want%20to%20know%20about%20the%20methimazole%20tablets" class="whatsapp-btn">Chat on WhatsApp</a>
+</div>
+<div class="product">
+    <img src="https://i.postimg.cc/rFf03jZR/11-1.jpg" alt="Cigarette filter" width="150">
+    <h3>D-06 Filter Cigarette Holder — Cigarette filter</h3>
+    <p><strong>Composition:</strong> Plastic, microfilters.</p>
+    <p><strong>Usage:</strong> Insert into the cigarette before smoking.</p>
+    <p><em>Dietary supplement. Not a medical treatment.</em></p>
+    <a href="https://wa.me/79871149378?text=Hello!%20I%20want%20to%20know%20about%20the%20cigarette%20filter" class="whatsapp-btn">Chat on WhatsApp</a>
+</div>
+<div class="product">
+    <img src="https://i.postimg.cc/VL5mLPWg/40.jpg" alt="Honey syrup with bai zhe and loquat for throat" width="150">
+    <h3>Kyoto Nian Ci Yan Mi Lian Chuan Bei Pi Pa Gao — Honey syrup with bai zhe and loquat for throat</h3>
+    <p><strong>Composition:</strong> Chuan bei, loquat, honey.</p>
+    <p><strong>Usage:</strong> 1 tablespoon 3 times a day.</p>
+    <p><em>Dietary supplement. Not a medical treatment.</em></p>
+    <a href="https://wa.me/79871149378?text=Hello!%20I%20want%20to%20know%20about%20the%20honey%20throat%20syrup" class="whatsapp-btn">Chat on WhatsApp</a>
+</div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ITKN. All rights reserved.</p>
+        <p>The site is not a pharmacy. Does not replace medical advice.</p>
+        <p>For business inquiries: <a href="mailto:i.t.t.m@qq.com">i.t.t.m@qq.com</a></p>
+    </footer>
+</body>
+</html>
