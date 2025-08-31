@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Modern Medicine in China — ITKN</title>
+    <meta name="description" content="How people in China are treated. Overview of popular medications."/>
+    <link rel="stylesheet" href="styles.css"/>
+
+    <style>
+        /* Общие стили (те же, что и в русской версии) */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            color: #333;
+            background: 
+                linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                url('https://i.postimg.cc/QMsCCbxB/image.png') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #2c5e3c;
+            margin: 0 0 10px 0;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        nav {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #2c5e3c;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .article {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 25px;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .article h2 {
+            color: #2c5e3c;
+            text-align: center;
+        }
+
+        .article p {
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .med-list {
+            max-width: 800px;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .med-item {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #ddd;
+        }
+
+        .med-item h4 {
+            color: #2c5e3c;
+            margin-bottom: 8px;
+        }
+
+        .med-item p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .disclaimer {
+            text-align: center;
+            font-style: italic;
+            color: #666;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            font-size: 14px;
+            color: #666;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Modern Medicine in China</h1>
+        <p>How people in the Middle Kingdom are treated</p>
+        <a href="medicine_in_china.html" style="position: absolute; top: 20px; right: 20px; color: #0066cc; text-decoration: none; font-size: 16px;">Rus</a>
+    </header>
+
+    <nav>
+        <a href="en_index.html">Home</a>
+        <a href="en_catalog.html">Catalog</a>
+        <a href="en_request.html">Request from China</a>
+        <a href="en_blog.html">Blog</a>
+        <a href="en_contacts.html">Contacts</a>
+    </nav>
+
+    <main>
+        <div class="article">
+            <h2>Modern Medicine in China: How People Are Treated</h2>
+
+            <p>When we think of China, traditional healing methods come to mind: acupuncture, herbs, qigong. But behind this image lies a <strong>modern, high-tech medical system</strong> that in many ways surpasses the Western one.</p>
+
+            <p>In China, <strong>modern (European-style) medicine</strong> is not just an addition to traditions, but the <strong>primary treatment method</strong>. People in China trust scientifically proven medications developed to the same standards as in Europe and the USA.</p>
+
+            <p>Major Chinese pharmaceutical companies like <strong>Shanghai Fosun Pharmaceutical</strong>, <strong>Sinopharm</strong>, and <strong>Hengrui Medicine</strong> produce millions of medication packages used in hospitals and pharmacies across the country.</p>
+
+            <p>These drugs are prescribed for various conditions — from colds to chronic diseases. They undergo clinical trials, are registered, and strictly regulated.</p>
+
+            <p>Below is an <strong>overview of some of the most popular and effective medications</strong> widely used in modern Chinese medicine. This material is for <strong>informational purposes only</strong> and is not a recommendation for use.</p>
+        </div>
+
+        <div class="med-list">
+            <h3>Popular Medications in Modern Chinese Medicine</h3>
+
+            <div class="med-item">
+                <h4>Suxiao Jiuxin Wan</h4>
+                <p><strong>Use:</strong> Emergency treatment for angina.</p>
+                <p><strong>Action:</strong> Rapidly dilates coronary arteries, improves heart circulation.</p>
+                <p><strong>Analogue in Russia:</strong> Nitroglycerin.</p>
+            </div>
+
+            <div class="med-item">
+                <h4>Amlodipine Besylate</h4>
+                <p><strong>Use:</strong> Treatment of hypertension and angina.</p>
+                <p><strong>Action:</strong> Relaxes smooth muscle of blood vessels, lowers blood pressure.</p>
+                <p><strong>Analogue in Russia:</strong> Norvasc, Amlodipine.</p>
+            </div>
+
+            <div class="med-item">
+                <h4>Thiamazole</h4>
+                <p><strong>Use:</strong> Treatment of hyperthyroidism.</p>
+                <p><strong>Action:</strong> Reduces thyroid hormone production.</p>
+                <p><strong>Analogue in Russia:</strong> Mercazole.</p>
+            </div>
+
+            <div class="med-item">
+                <h4>Sertraline Hydrochloride</h4>
+                <p><strong>Use:</strong> Treatment of depression, anxiety disorders, OCD.</p>
+                <p><strong>Action:</strong> Selective serotonin reuptake inhibitor (SSRI).</p>
+                <p><strong>Analogue in Russia:</strong> Zoloft.</p>
+            </div>
+
+            <div class="med-item">
+                <h4>Montmorillonite Powder</h4>
+                <p><strong>Use:</strong> Treatment of diarrhea.</p>
+                <p><strong>Action:</strong> Coats the intestinal lining, absorbs toxins.</p>
+                <p><strong>Analogue in Russia:</strong> Smecta.</p>
+            </div>
+
+            <div class="med-item">
+                <h4>Beichuan Pipa Gao</h4>
+                <p><strong>Use:</strong> Symptomatic treatment of cough and upper respiratory tract diseases.</p>
+                <p><strong>Action:</strong> Expectorant, antitussive, moisturizing.</p>
+                <p><strong>Analogue in Russia:</strong> Herbion, Stopcough.</p>
+            </div>
+        </div>
+
+        <div class="disclaimer">
+            <p><em><strong>Important:</strong> This material is for informational purposes only. All medications must be prescribed by a doctor. We do not sell medications. Do not self-medicate.</em></p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ITKN. All rights reserved.</p>
+        <p>The site is not a pharmacy. Does not replace medical advice.</p>
+        <p>For business inquiries: <a href="mailto:i.t.t.m@qq.com">i.t.t.m@qq.com</a></p>
+    </footer>
+</body>
+</html>
