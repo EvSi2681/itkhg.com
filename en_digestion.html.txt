@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Digestive Support — ITKN</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <style>/* ...общие стили... */</style>
+</head>
+<body>
+    <header>
+        <h1>Digestive Support</h1>
+        <p>Natural products for stomach health</p>
+        <a href="digestion.html" style="position: absolute; top: 20px; right: 20px; color: #0066cc; text-decoration: none; font-size: 16px;">Rus</a>
+    </header>
+
+    <nav>
+        <a href="en_index.html">Home</a>
+        <a href="en_catalog.html">Catalog</a>
+        <a href="en_request.html">Request from China</a>
+        <a href="en_blog.html">Blog</a>
+        <a href="en_contacts.html">Contacts</a>
+    </nav>
+
+    <main>
+        <div class="product">
+            <img src="images/1.jpg" alt="Red bean, rice and lotus seed tea" width="150">
+            <h3>Chi Xiao Dou Yi Mi Qian Shi Cha — Red bean, rice and lotus seed tea</h3>
+            <p><strong>Composition:</strong> Red bean, rice sprouts, lotus seeds.</p>
+            <p><strong>Usage:</strong> 30–50 g per 300–450 ml boiling water, steep 3–6 min.</p>
+            <p><em>Not a medicinal product.</em></p>
+            <a href="https://wa.me/79871149378?text=Hello!%20I%20want%20to%20know%20about%20the%20red%20bean%20tea" class="whatsapp-btn">Chat on WhatsApp</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ITKN. All rights reserved.</p>
+        <p>The site is not a pharmacy. Does not replace medical advice.</p>
+        <p>For business inquiries: <a href="mailto:i.t.t.m@qq.com">i.t.t.m@qq.com</a></p>
+    </footer>
+</body>
+</html>
