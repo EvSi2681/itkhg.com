@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Men's Health Support — ITKN</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <style>
+body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            color: #333;
+            background: 
+                linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                url('https://i.postimg.cc/QMsCCbxB/image.png') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #2c5e3c;
+            margin: 0 0 10px 0;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        nav {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #2c5e3c;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .product {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .product img {
+            max-width: 150px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .whatsapp-btn {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 12px 24px;
+            background-color: #25D366;
+            color: white !important;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            font-size: 14px;
+            color: #666;
+            margin-top: auto;
+        }
+</style>
+</head>
+<body>
+    <header>
+        <h1>Men's Health Support</h1>
+        <p>Daily care products</p>
+        <a href="men.html" style="position: absolute; top: 20px; right: 20px; color: #0066cc; text-decoration: none; font-size: 16px;">Rus</a>
+    </header>
+
+    <nav>
+        <a href="en_index.html">Home</a>
+        <a href="en_catalog.html">Catalog</a>
+        <a href="en_request.html">Request from China</a>
+        <a href="en_blog.html">Blog</a>
+        <a href="en_medicine_in_china.html">Modern Medicine in China</a>
+        <a href="en_contacts.html">Contacts</a>
+    </nav>
+
+    <main>
+        <div class="product">
+    <img src="https://i.postimg.cc/pT2MwwdD/41.jpg" alt="Lycopene soft capsules" width="150">
+    <h3>Fan Qie Hong Su Ruan Jiaonang — Lycopene soft capsules</h3>
+    <p><strong>Composition:</strong> Lycopene.</p>
+    <p><strong>Usage:</strong> 1 capsule 1 time a day.</p>
+    <p><em>Dietary supplement. Not a medical treatment.</em></p>
+    <a href="https://wa.me/79871149378?text=Hello!%20I%20want%20to%20know%20about%20the%20lycopene%20capsules" class="whatsapp-btn">Chat on WhatsApp</a>
+</div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ITTM. All rights reserved.</p>
+        <p>The site is not a pharmacy. Does not replace medical advice.</p>
+        <p>For business inquiries: <a href="mailto:i.t.t.m@qq.com">i.t.t.m@qq.com</a></p>
+    </footer>
+</body>
+</html>
