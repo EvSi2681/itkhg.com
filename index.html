@@ -100,6 +100,29 @@
         }
     </style>
 </head>
+    <!-- === ЧАТ С ПРОДАВЦАМИ === -->
+<div id="element-chat-widget">
+  <div id="chat-button" onclick="openChat()">💬 Связаться с продавцом</div>
+  <div id="chat-window">
+    <div class="chat-header">
+      <span>Чат с продавцом</span>
+      <button onclick="closeChat()">✕</button>
+    </div>
+    <iframe src="https://itkhg.com/#/room/#sellers:itkhg.com" style="width:100%; height:500px; border:none;" title="Чат с продавцом"></iframe>
+  </div>
+</div>
+<style>
+  #element-chat-widget {position:fixed;bottom:20px;right:20px;z-index:1000;font-family:Arial;}
+  #chat-button {width:60px;height:60px;background:#2563eb;color:white;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:14px;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.2);}
+  #chat-window {width:380px;height:600px;background:white;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.15);display:none;overflow:hidden;border:1px solid #ddd;}
+  .chat-header {background:#2563eb;color:white;padding:12px;font-weight:bold;display:flex;justify-content:space-between;align-items:center;}
+  .chat-header button {background:none;border:none;color:white;cursor:pointer;}
+</style>
+<script>
+  function openChat() { document.getElementById('chat-window').style.display='block'; document.getElementById('chat-button').style.display='none'; }
+  function closeChat() { document.getElementById('chat-window').style.display='none'; document.getElementById('chat-button').style.display='flex'; }
+</script>
+<!-- === КОНЕЦ === -->
 <body>
 </style>
     <header>
@@ -140,6 +163,7 @@
     </footer>
 </body>
 </html>
+
 
 
 
