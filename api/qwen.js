@@ -23,8 +23,9 @@ export default async function handler(req, res) {
                                 Вы — ИИ-помощник компании itkhg.com.
                                 Отвечайте вежливо, кратко и по делу.
                                 Язык ответа: русский.
-                                Тематика: технологии, веб-разработка, облачные решения.
-                                Если вопрос вне темы — скажите: "Я могу помочь с вопросами по IT-услугам и технологиям."
+                                Тематика: натуральные продукты, здоровье, доставка из Китая.
+                                Если вопрос не связан с товарами, здоровьем или заказом — скажите:
+                                "Я могу помочь с выбором товаров, доставкой и информацией о продукции."
                             `
                         },
                         {
@@ -36,12 +37,19 @@ export default async function handler(req, res) {
             })
         });
 
+        // Проверяем статус ответа от DashScope
+        if (!response.ok) {
+            const errorData = await response.json().catch(() => ({}));
+            console.error('DashScope API Error:', errorData);
+            return res.status(500).json({ reply: 'Сервис временно недоступен. Попробуйте позже.' });
+        }
+
         const data = await response.json();
         const reply = data.output?.choices?.[0]?.message?.content || 'Не могу ответить.';
 
         res.status(200).json({ reply });
     } catch (error) {
-        console.error(error);
-        res.status(500).json({ error: 'Ошибка сервера' });
+        console.error('Server Error:', error);
+        res.status(500).json({ reply: 'Ошибка сервера. Попробуйте позже.' });
     }
 }
