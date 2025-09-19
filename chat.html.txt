@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>itkhg.com — Чат</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; background: #f9f9f9; }
+    #chat { height: 500px; border: 1px solid #ddd; padding: 15px; margin: 20px 0; background: white; border-radius: 10px; overflow-y: scroll; }
+    .user, .bot { margin: 8px 0; }
+    .user { color: blue; text-align: right; }
+    .bot { color: green; }
+    input, button { padding: 12px; }
+    .whatsapp-btn {
+      display: block; width: 100%; padding: 16px; background: #25D366; color: white; text-align: center;
+      font-weight: bold; font-size: 18px; text-decoration: none; border-radius: 8px; margin-top: 20px;
+    }
+    .info { font-size: 14px; color: #555; background: #fffbe6; padding: 12px; border-radius: 8px; border-left: 4px solid #faad14; }
+  </style>
+</head>
+<body>
+  <h1>💬 Чат itkhg.com</h1>
+
+  <div class="info">
+    <strong>Важно:</strong> Продукция не является лекарственным средством. Перед применением проконсультируйтесь со специалистом.
+  </div>
+
+  <div id="chat"></div>
+  <input type="text" id="inp" placeholder="Задайте вопрос..." style="width: 70%" />
+  <button onclick="send()">Отправить</button>
+
+  <a href="https://wa.me/8612345678901" class="whatsapp-btn">📱 Написать в WhatsApp</a>
+
+  <script>
+    const chat = document.getElementById("chat");
+    
+    function addMessage(who, text, cls) {
+      const div = document.createElement("div");
+      div.className = cls;
+      div.innerHTML = `<b>${who}:</b> ${text}`;
+      chat.appendChild(div);
+      chat.scrollTop = chat.scrollHeight;
+    }
+
+    // Приветствие
+    setTimeout(() => {
+      addMessage("Бот", "Здравствуйте! Я помогу узнать о товарах или проверить возможность доставки из Китая.", "bot");
+    }, 500);
+
+    function send() {
+      const input = document.getElementById("inp");
+      const msg = input.value.trim().toLowerCase();
+      if (!msg) return;
+
+      addMessage("Вы", input.value, "user");
+
+      let reply = "";
+
+      if (msg.includes("что") && msg.includes("есть")) {
+        reply = "У нас есть натуральные продукты по традициям китайской культуры здоровья. Все прошли проверку на безопасность.";
+      } else if (msg.includes("лекарство") || msg.includes("лечит")) {
+        reply = "Продукция не является лекарственным средством. Перед применением проконсультируйтесь со специалистом.";
+      } else if (msg.includes("запрос") || msg.includes("нет") || msg.includes("другой")) {
+        reply = "Если нужного товара нет — мы можем проверить возможность его доставки из Китая. Нажмите кнопку ниже.";
+      } else {
+        reply = "Спасибо за вопрос! Если хотите, чтобы мы проверили доставку товара из Китая — нажмите кнопку ниже и напишите, что ищете.";
+      }
+
+      setTimeout(() => {
+        addMessage("Бот", reply, "bot");
+      }, 600);
+
+      input.value = "";
+    }
+  </script>
+</body>
+</html>
