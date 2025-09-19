@@ -165,11 +165,12 @@
         </a>
     </div>
     </footer>
-            <script>
+          <script>
+// === ЧАТ-БОТ для itkhg.com (безопасная версия) ===
 (function() {
-    const apiKey = 'sk-a7e72e56c73f4910b93675e7771f1ed4'; 
-    const botName = 'IWIT ИИ-Помощник';
+    const botName = 'IWIT II Помощник';
 
+    // Кнопка
     const button = document.createElement('button');
     button.innerHTML = '💬 ' + botName;
     button.style.cssText = `
@@ -178,55 +179,35 @@
         border-radius: 50px; font-size: 14px; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     `;
 
+    // Окно чата
     const chat = document.createElement('div');
     chat.innerHTML = `
         <div style="font-family:Arial,sans-serif; width: 360px; height: 500px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.15); display: none; position: fixed; bottom: 80px; right: 20px; background: white; z-index: 9998;">
-            <div style="background:#00aaff; color:white; padding:12px; font-weight:bold; text-align:center; cursor:pointer;" id="chat-header">💬 ${botName}</div>
+            <div style="background:#00aaff; color:white; padding:12px; font-weight:bold; text-align:center; cursor:pointer;">💬 ${botName}</div>
             <div id="chat-body" style="height:390px; overflow-y:auto; padding:10px; font-size:14px;"></div>
             <div style="display:flex; padding:10px; border-top:1px solid #eee;">
-                <input type="text" placeholder="Напишите вопрос..." style="flex:1; padding:8px; border:1px solid #ccc; border-radius:4px; margin-right:5px; outline:none;" id="user-input"/>
-                <button id="send-btn" style="background:#00aaff; color:white; border:none; padding:0 10px; border-radius:4px; cursor:pointer;">Отправить</button>
+                <input type="text" placeholder="Спросите об IT..." style="flex:1; padding:8px; border:1px solid #ccc; border-radius:4px; margin-right:5px; outline:none;" id="user-input"/>
+                <button id="send-btn" style="background:#00aaff; color:white; border:none; padding:0 10px; border-radius:4px; cursor:pointer;">→</button>
             </div>
         </div>
     `;
     document.body.appendChild(button);
     document.body.appendChild(chat);
 
-    const chatBox = chat.querySelector('div > div:first-child');
+    const chatBox = chat.querySelector('div');
     const chatBody = chat.getElementById('chat-body');
     const userInput = chat.getElementById('user-input');
     const sendBtn = chat.getElementById('send-btn');
 
     button.onclick = () => { chatBox.style.display = 'block'; button.style.display = 'none'; };
-    chat.getElementById('chat-header').onclick = () => { chatBox.style.display = 'none'; button.style.display = 'block'; };
+    chatBox.children[0].onclick = () => { chatBox.style.display = 'none'; button.style.display = 'block'; };
 
     function addMessage(text, align, bg) {
         const msg = document.createElement('div');
-        msg.style.cssText = `margin:8px 0; max-width:80%; padding:8px 12px; border-radius:12px; font-size:14px; line-height:1.4; 
-                             text-align:${align}; background:${bg}; margin-${align}auto;`;
+        msg.style.cssText = `margin:8px 0; max-width:80%; padding:8px 12px; border-radius:12px; font-size:14px; line-height:1.4; text-align:${align}; background:${bg}; margin-${align}auto;`;
         msg.innerText = text;
         chatBody.appendChild(msg);
         chatBody.scrollTop = chatBody.scrollHeight;
-    }
-
-    async function askQwen(prompt) {
-        try {
-            const resp = await fetch('https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation', {
-                method: 'POST',
-                headers: {
-                    'Authorization': 'Bearer ' + apiKey,
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    model: 'qwen-max',
-                    input: { messages: [{ role: 'user', content: prompt }] }
-                })
-            });
-            const data = await resp.json();
-            return data.output?.choices?.[0]?.message?.content || 'Не могу ответить.';
-        } catch (e) {
-            return 'Ошибка подключения к ИИ.';
-        }
     }
 
     sendBtn.onclick = async () => {
@@ -234,21 +215,24 @@
         if (!text) return;
         addMessage(text, 'right', '#e3f2fd');
         userInput.value = '';
-        const reply = await askQwen(text);
-        addMessage(reply, 'left', '#f0f0f0');
+        const response = await fetch('/api/qwen', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ prompt: text })
+        });
+        const data = await response.json();
+        addMessage(data.reply, 'left', '#f0f0f0');
     };
 
-    userInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') sendBtn.click();
-    });
+    userInput.addEventListener('keypress', e => e.key === 'Enter' && sendBtn.click());
 
-    // Приветствие
-    addMessage(`Привет! Я — ваш ИИ-помощник. Чем могу помочь?`, 'left', '#f0f0f0');
+    addMessage('Привет! Я — ваш IT-консультант. Спросите меня о вебе, облаках или Qwen!', 'left', '#f0f0f0');
 })();
 </script>
 </body>
 </div>
 </html>
+
 
 
 
