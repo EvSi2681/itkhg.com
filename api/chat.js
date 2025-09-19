@@ -21,10 +21,19 @@ export default async function handler(req, res) {
   `;
 
   try {
+    const apiKey = process.env.QWEN_API_KEY;
+    
+    if (!apiKey) {
+      console.error('QWEN_API_KEY не найден');
+      return res.status(500).json({ 
+        answer: 'Ошибка: ключ API не загружен.' 
+      });
+    }
+
     const response = await fetch('https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation', {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${process.env.QWEN_API_KEY}`,
+        'Authorization': `Bearer ${apiKey}`,
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
@@ -37,17 +46,26 @@ export default async function handler(req, res) {
       })
     });
 
+    if (!response.ok) {
+      const errData = await response.json();
+      console.error('API Error:', errData);
+      return res.status(500).json({ 
+        answer: 'Ошибка при обращении к Qwen API.' 
+      });
+    }
+
     const data = await response.json();
     const answer = data.output?.text || 'Ответ временно недоступен.';
     res.status(200).json({ answer });
   } catch (error) {
-    console.error('API Error:', error);
+    console.error('Catch Error:', error);
     res.status(500).json({ 
-      answer: 'Ошибка сервера. Попробуйте позже.' 
+      answer: 'Внутренняя ошибка сервера.' 
     });
   }
 }
 
+// Обязательно добавьте это!
 export const config = {
   runtime: 'edge',
 };
