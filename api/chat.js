@@ -65,7 +65,6 @@ export default async function handler(req, res) {
   }
 }
 
-// Обязательно добавьте это!
 export const config = {
   runtime: 'edge',
 };
