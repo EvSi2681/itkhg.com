@@ -165,7 +165,7 @@
         </a>
     </div>
     </footer>
-        <script>
+       <script>
 document.addEventListener('DOMContentLoaded', function() {
     const botName = 'IT Помощник';
 
@@ -194,9 +194,9 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.appendChild(chat);
 
     const chatBox = chat.querySelector('div');
-    const chatBody = chat.getElementById('chat-body');
-    const userInput = chat.getElementById('user-input');
-    const sendBtn = chat.getElementById('send-btn');
+    const chatBody = chat.querySelector('#chat-body'); // ← ИСПРАВЛЕНО!
+    const userInput = chat.querySelector('#user-input'); // ← ИСПРАВЛЕНО!
+    const sendBtn = chat.querySelector('#send-btn'); // ← ИСПРАВЛЕНО!
 
     // Обработчики событий
     button.onclick = () => { 
@@ -246,6 +246,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </body>
 </div>
 </html>
+
 
 
 
