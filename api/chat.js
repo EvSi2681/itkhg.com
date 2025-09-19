@@ -22,18 +22,20 @@ export default async function (req, res) {
 
   try {
     const response = await fetch('https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${process.env.QWEN_API_KEY}`,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        model: 'qwen-max',
-        input: {
-          messages: [{ role: 'user', content: prompt }]
-        }
-      })
-    });
+  method: 'POST',
+  headers: {
+    'Authorization': `Bearer ${process.env.QWEN_API_KEY}`,
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    model: 'qwen-max',
+    input: {
+      messages: [
+        { role: 'user', content: prompt }
+      ]
+    }
+  })
+});
 
     const data = await response.json();
     const answer = data.output?.text || 'Извините, произошла ошибка.';
