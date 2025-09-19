@@ -1,6 +1,6 @@
-export default async function (req, res) {
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Метод не поддерживается' });
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   const { question } = req.body;
@@ -38,12 +38,16 @@ export default async function (req, res) {
     });
 
     const data = await response.json();
-    const answer = data.output?.text || 'Извините, ответ временно недоступен.';
+    const answer = data.output?.text || 'Ответ временно недоступен.';
     res.status(200).json({ answer });
   } catch (error) {
-    console.error('Ошибка:', error);
+    console.error('API Error:', error);
     res.status(500).json({ 
-      answer: 'Сервер временно недоступен. Попробуйте позже.' 
+      answer: 'Ошибка сервера. Попробуйте позже.' 
     });
   }
 }
+
+export const config = {
+  runtime: 'edge',
+};
