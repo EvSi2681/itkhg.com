@@ -1,5 +1,13 @@
-// /pages/api/qwen.js
 export default async function handler(req, res) {
+    // Добавляем CORS
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+    if (req.method === 'OPTIONS') {
+        return res.status(200).end();
+    }
+
     if (req.method !== 'POST') {
         return res.status(405).json({ error: 'Метод не поддерживается' });
     }
@@ -37,10 +45,9 @@ export default async function handler(req, res) {
             })
         });
 
-        // Проверяем статус ответа от DashScope
         if (!response.ok) {
             const errorData = await response.json().catch(() => ({}));
-            console.error('DashScope API Error:', errorData);
+            console.error('DashScope Error:', errorData);
             return res.status(500).json({ reply: 'Сервис временно недоступен. Попробуйте позже.' });
         }
 
