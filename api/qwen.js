@@ -1,5 +1,4 @@
 export default async function handler(req, res) {
-    // Добавляем CORS
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
@@ -15,7 +14,7 @@ export default async function handler(req, res) {
     const { prompt } = req.body;
 
     try {
-        const response = await fetch('https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation', {
+        const response = await fetch('https://dashscope.aliyun.com/api/v1/services/aigc/text-generation/generation', {
             method: 'POST',
             headers: {
                 'Authorization': `Bearer ${process.env.DASHSCOPE_API_KEY}`,
@@ -29,11 +28,9 @@ export default async function handler(req, res) {
                             role: 'system',
                             content: `
                                 Вы — ИИ-помощник компании itkhg.com.
-                                Отвечайте вежливо, кратко и по делу.
-                                Язык ответа: русский.
+                                Отвечайте вежливо, кратко и по делу на русском языке.
                                 Тематика: натуральные продукты, здоровье, доставка из Китая.
-                                Если вопрос не связан с товарами, здоровьем или заказом — скажите:
-                                "Я могу помочь с выбором товаров, доставкой и информацией о продукции."
+                                Если вопрос не по теме — скажите: "Я могу помочь с выбором товаров, доставкой и информацией о продукции."
                             `
                         },
                         {
