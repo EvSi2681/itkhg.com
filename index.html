@@ -165,10 +165,9 @@
         </a>
     </div>
     </footer>
-          <script>
-// === ЧАТ-БОТ для itkhg.com (безопасная версия) ===
+         <script>
 (function() {
-    const botName = 'IWIT II Помощник';
+    const botName = 'IT Помощник';
 
     // Кнопка
     const button = document.createElement('button');
@@ -186,7 +185,7 @@
             <div style="background:#00aaff; color:white; padding:12px; font-weight:bold; text-align:center; cursor:pointer;">💬 ${botName}</div>
             <div id="chat-body" style="height:390px; overflow-y:auto; padding:10px; font-size:14px;"></div>
             <div style="display:flex; padding:10px; border-top:1px solid #eee;">
-                <input type="text" placeholder="Спросите об IT..." style="flex:1; padding:8px; border:1px solid #ccc; border-radius:4px; margin-right:5px; outline:none;" id="user-input"/>
+                <input type="text" placeholder="Спросите о товарах..." style="flex:1; padding:8px; border:1px solid #ccc; border-radius:4px; margin-right:5px; outline:none;" id="user-input"/>
                 <button id="send-btn" style="background:#00aaff; color:white; border:none; padding:0 10px; border-radius:4px; cursor:pointer;">→</button>
             </div>
         </div>
@@ -226,12 +225,13 @@
 
     userInput.addEventListener('keypress', e => e.key === 'Enter' && sendBtn.click());
 
-    addMessage('Привет! Я — ваш IT-консультант. Спросите меня о вебе, облаках или Qwen!', 'left', '#f0f0f0');
+    addMessage('Привет! Я — ваш помощник по товарам из Китая. Спросите меня о продукции или доставке!', 'left', '#f0f0f0');
 })();
 </script>
 </body>
 </div>
 </html>
+
 
 
 
