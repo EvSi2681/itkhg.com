@@ -120,30 +120,7 @@
         }
     </style>
 </head>
-    <!-- === ЧАТ С ПРОДАВЦАМИ === -->
-<div id="element-chat-widget">
-  <div id="chat-button" onclick="openChat()">💬 Связаться с продавцом</div>
-  <div id="chat-window">
-    <div class="chat-header">
-      <span>Чат с продавцом</span>
-      <button onclick="closeChat()">✕</button>
-    </div>
-    <iframe src="https://chat.itkhg.com" style="width:100%; height:500px; border:none;" title="Чат с продавцом"></iframe>
-  </div>
-</div>
-<style>
-  #element-chat-widget {position:fixed;bottom:20px;right:20px;z-index:1000;font-family:Arial;}
-  #chat-button {width:60px;height:60px;background:#2563eb;color:white;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:14px;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.2);}
-  #chat-window {width:380px;height:600px;background:white;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.15);display:none;overflow:hidden;border:1px solid #ddd;}
-  .chat-header {background:#2563eb;color:white;padding:12px;font-weight:bold;display:flex;justify-content:space-between;align-items:center;}
-  .chat-header button {background:none;border:none;color:white;cursor:pointer;}
-</style>
-<script>
-  function openChat() { document.getElementById('chat-window').style.display='block'; document.getElementById('chat-button').style.display='none'; }
-  function closeChat() { document.getElementById('chat-window').style.display='none'; document.getElementById('chat-button').style.display='flex'; }
-</script>
-<!-- === КОНЕЦ === -->
-<body>
+    <body>
 </style>
     <header>
         <h1>Китайская лавка-ITK Health Goods</h1>
@@ -187,10 +164,127 @@
             IWIT
         </a>
     </div>
-</footer>
     </footer>
 </body>
+       <!-- 💬 Начало чат-бота -->
+<div id="chat-container" style="
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 360px;
+    height: 500px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    background: white;
+    overflow: hidden;
+    z-index: 9999;
+    display: none;
+">
+
+  <!-- Заголовок -->
+  <div style="background: #2c5e3c; color: white; padding: 12px; font-weight: bold; text-align: center;">
+    💬 Чат itkhg.com
+  </div>
+
+  <!-- Окно чата -->
+  <div id="chat" style="height: 400px; overflow-y: scroll; padding: 10px; background: #f9f9f9;"></div>
+
+  <!-- Поле ввода -->
+  <div style="padding: 10px; display: flex;">
+    <input 
+      type="text" 
+      id="inp" 
+      placeholder="Задайте вопрос..." 
+      style="flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 4px;"
+    />
+    <button onclick="send()" style="margin-left: 5px; padding: 10px 15px; background: #2c5e3c; color: white; border: none; border-radius: 4px; cursor: pointer;">
+      ↵
+    </button>
+  </div>
+
+  <!-- Кнопка WhatsApp -->
+  <a href="https://wa.me/8612345678901" style="text-align: center; padding: 10px; background: #25D366; color: white; text-decoration: none; font-weight: bold; display: block;">
+    📱 Написать в WhatsApp
+  </a>
+</div>
+
+<!-- Кнопка для открытия чата -->
+<button id="chat-toggle" style="
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: #2c5e3c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+">
+    💬
+</button>
+
+<script>
+  const chatContainer = document.getElementById("chat-container");
+  const chatToggle = document.getElementById("chat-toggle");
+
+  // Переключение видимости чата
+  chatToggle.addEventListener("click", () => {
+    if (chatContainer.style.display === "none") {
+      chatContainer.style.display = "block";
+      chatToggle.style.display = "none"; // Скрываем кнопку при открытии
+    }
+  });
+
+  // Закрыть чат по клику на заголовок
+  document.querySelector("#chat-container > div:first-child").addEventListener("click", () => {
+    chatContainer.style.display = "none";
+    chatToggle.style.display = "flex"; // Показываем кнопку
+  });
+
+  // Функция отправки сообщения
+  async function send() {
+    const input = document.getElementById("inp");
+    const msg = input.value.trim();
+    if (!msg) return;
+
+    addMessage("Вы", msg, "blue");
+
+    const res = await fetch("/api/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ question: msg })
+    });
+
+    const data = await res.json();
+    addMessage("Бот", data.answer, "green");
+    input.value = "";
+  }
+
+  // Добавление сообщения в чат
+  function addMessage(who, text, color) {
+    const div = document.createElement("div");
+    div.innerHTML = `<b>${who}:</b> <span style="color:${color}">${text}</span>`;
+    div.style.margin = "5px 0";
+    document.getElementById("chat").appendChild(div);
+    document.getElementById("chat").scrollTop = document.getElementById("chat").scrollHeight;
+  }
+
+  // Первое сообщение бота
+  setTimeout(() => {
+    addMessage("Бот", "Здравствуйте! Я помогу узнать о товарах или проверить возможность доставки из Китая.", "green");
+  }, 500);
+</script>
+<!-- 💬 Конец чат-бота -->     
 </html>
+
 
 
 
