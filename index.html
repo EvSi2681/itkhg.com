@@ -37,9 +37,15 @@
     <link rel="alternate" hreflang="en" href="https://www.itkhg.com/en_index.html">
     <link rel="alternate" hreflang="ru" href="https://www.itkhg.com/index.html">
     <link rel="canonical" href="https://www.itkhg.com/index.html" />
-</head>
-<body>
-    <!-- ВСЕ СТИЛИ И КОНТЕНТ ТУТ -->
+    
+    <!-- Добавляем Font Awesome для иконки WhatsApp -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Добавляем React и Babel для работы чата -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
     <style>
         body {
             margin: 0;
@@ -117,11 +123,169 @@
         nav a:hover {
             text-decoration: underline;
         }
+        
+        /* Стили для чата */
+        .chat-section {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .chat-section h2 {
+            color: #2c5e3c;
+            margin-bottom: 20px;
+        }
+        
+        .chat-section p {
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        .chat-container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            height: 600px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background: white;
+        }
+        
+        .chat-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .message {
+            max-width: 80%;
+            margin-bottom: 5px;
+            padding: 10px 15px;
+            border-radius: 18px;
+            line-height: 1.4;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .message.user {
+            align-self: flex-end;
+            background-color: #0066ff;
+            color: white;
+            border-bottom-right-radius: 5px;
+        }
+        
+        .message.assistant {
+            align-self: flex-start;
+            background-color: #f0f0f0;
+            color: #333;
+            border-bottom-left-radius: 5px;
+        }
+        
+        .typing span {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #888;
+            margin: 0 2px;
+            animation: typing 1.3s infinite ease-in-out;
+        }
+        
+        .typing span:nth-child(1) { animation-delay: 0s; }
+        .typing span:nth-child(2) { animation-delay: 0.2s; }
+        .typing span:nth-child(3) { animation-delay: 0.4s; }
+        
+        @keyframes typing {
+            0%, 60%, 100% { transform: translateY(0); }
+            30% { transform: translateY(-5px); }
+        }
+        
+        .chat-input-form {
+            display: flex;
+            padding: 10px;
+            border-top: 1px solid #eee;
+            background: white;
+        }
+        
+        .chat-input-form input {
+            flex: 1;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            margin-right: 10px;
+            font-size: 16px;
+            outline: none;
+        }
+        
+        .chat-input-form input:focus {
+            border-color: #0066ff;
+            box-shadow: 0 0 0 2px rgba(0,102,255,0.2);
+        }
+        
+        .chat-input-form button {
+            background-color: #0066ff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+        
+        .chat-input-form button:hover:not(:disabled) {
+            background-color: #0055d4;
+        }
+        
+        .chat-input-form button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        
+        .chat-actions {
+            padding: 10px;
+            text-align: center;
+            border-top: 1px solid #eee;
+        }
+        
+        .whatsapp-button {
+            display: inline-flex;
+            align-items: center;
+            background-color: #25D366;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            font-size: 14px;
+        }
+        
+        .whatsapp-button:hover {
+            background-color: #128C7E;
+            text-decoration: none;
+        }
+        
+        .whatsapp-button i {
+            margin-right: 8px;
+            font-size: 18px;
+        }
     </style>
-
+</head>
+<body>
     <header>
         <h1>Китайская лавка-ITK Health Goods</h1>
-        <p>Натуральные средства, вдохновлённые традициями Китая</p>
+        <p>Натуральные средства, вдохновлённые традициями Китайской медицины</p>
         <a href="en_index.html" style="position: absolute; top: 20px; right: 20px; color: #0066cc; text-decoration: none; font-size: 16px;">Eng</a>
     </header>
 
@@ -146,6 +310,18 @@
             <p>Если вы ищете средство, которого нет в каталоге — оставьте запрос. Мы проверим возможность его доставки из Китая.</p>
             <a href="request.html" class="btn">Оставить запрос</a>
         </section>
+        
+        <!-- Фармацевтический консультант (чат-бот) -->
+        <div class="chat-section">
+            <div>
+                <h2>Фармацевтический консультант</h2>
+                <p>
+                    Задайте вопрос о препаратах, получите рекомендации и подберите китайские аналоги
+                </p>
+            </div>
+            
+            <div id="ai-chat-container" style="min-height: 600px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1);"></div>
+        </div>
     </main>
 
     <footer>
@@ -160,56 +336,164 @@
             </a>
         </div>
     </footer>
-    <div style={{ 
-  maxWidth: '1200px', 
-  margin: '40px auto', 
-  padding: '0 20px',
-  display: 'flex',
-  flexDirection: 'column',
-  gap: '20px'
-}}>
-  <div>
-    <h1 style={{ textAlign: 'center', marginBottom: '20px' }}>Фармацевтический консультант</h1>
-    <p style={{ textAlign: 'center', color: '#666', marginBottom: '30px' }}>
-      Задайте вопрос о препаратах, получите рекомендации и подберите китайские аналоги
-    </p>
-  </div>
-  
-  <AIChat />
-</div>
+    
+    <!-- Скрипт для чата -->
+    <script type="text/babel">
+        function AIChat() {
+            const [messages, setMessages] = React.useState([
+                { 
+                    role: 'assistant', 
+                    content: 'Здравствуйте! Я - ваш фармацевтический консультант. Могу помочь подобрать препараты, рассказать о китайских аналогах и дать рекомендации. Как я могу вам помочь?' 
+                }
+            ]);
+            const [input, setInput] = React.useState('');
+            const [isLoading, setIsLoading] = React.useState(false);
+            const messagesEndRef = React.useRef(null);
+            
+            React.useEffect(() => {
+                messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+            }, [messages]);
+            
+            const handleSubmit = async (e) => {
+                e.preventDefault();
+                if (!input.trim() || isLoading) return;
+                
+                const userMessage = { role: 'user', content: input };
+                setMessages(prev => [...prev, userMessage]);
+                setInput('');
+                setIsLoading(true);
+                
+                try {
+                    // Создаем временный assistant message для потоковой передачи
+                    const assistantMessage = { role: 'assistant', content: '' };
+                    setMessages(prev => [...prev, assistantMessage]);
+                    
+                    // Формируем промпт с контекстом медицинского консультанта
+                    const fullPrompt = `Ты - фармацевт и медицинский консультант сайта itkhg.com. Пользователь спрашивает о препаратах и здоровье. 
+                    Отвечай кратко, профессионально и дружелюбно. Если вопрос касается диагноза или лечения, 
+                    рекомендуй обратиться к врачу, но можешь предложить подходящие препараты из каталога itkhg.com.
+                    Если спрашивают о китайских аналогах, укажи соответствующие препараты.
+                    
+                    История диалога:
+                    ${messages.map(m => \`\${m.role === 'user' ? 'Пользователь' : 'Фармацевт'}: \${m.content}\`).join('\\n')}
+                    
+                    Пользователь: \${input}
+                    Фармацевт:`;
+                    
+                    let fullResponse = '';
+                    
+                    // Отправляем запрос к прокси-серверу
+                    const response = await fetch('/api/ollama', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            prompt: fullPrompt
+                        }),
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(\`Ошибка API: \${response.status}\`);
+                    }
+
+                    const reader = response.body.getReader();
+                    const decoder = new TextDecoder();
+                    
+                    while (true) {
+                        const { value, done } = await reader.read();
+                        if (done) break;
+                        
+                        const chunk = decoder.decode(value, { stream: true });
+                        const lines = chunk.split('\\n');
+                        
+                        for (const line of lines) {
+                            if (line.trim()) {
+                                try {
+                                    const json = JSON.parse(line.trim());
+                                    if (json.response) {
+                                        fullResponse += json.response;
+                                        setMessages(prev => {
+                                            const newMessages = [...prev];
+                                            newMessages[newMessages.length - 1] = { 
+                                                role: 'assistant', 
+                                                content: fullResponse 
+                                            };
+                                            return newMessages;
+                                        });
+                                    }
+                                } catch (e) {
+                                    console.error('Error parsing JSON:', e);
+                                }
+                            }
+                        }
+                    }
+                    
+                } catch (error) {
+                    console.error('Ошибка при запросе к Ollama:', error);
+                    setMessages(prev => [
+                        ...prev,
+                        { 
+                            role: 'assistant', 
+                            content: 'Извините, произошла ошибка при обработке запроса. Пожалуйста, попробуйте позже.' 
+                        }
+                    ]);
+                } finally {
+                    setIsLoading(false);
+                }
+            };
+            
+            return (
+                <div className="chat-container">
+                    <div className="chat-messages">
+                        {messages.map((msg, index) => (
+                            <div key={index} className={`message \${msg.role}`}>
+                                <div className="message-content">{msg.content}</div>
+                            </div>
+                        ))}
+                        {isLoading && (
+                            <div className="message assistant">
+                                <div className="message-content typing">
+                                    <span></span><span></span><span></span>
+                                </div>
+                            </div>
+                        )}
+                        <div ref={messagesEndRef} />
+                    </div>
+                    
+                    <form onSubmit={handleSubmit} className="chat-input-form">
+                        <input
+                            type="text"
+                            value={input}
+                            onChange={(e) => setInput(e.target.value)}
+                            placeholder="Задайте вопрос о препаратах или здоровье..."
+                            disabled={isLoading}
+                        />
+                        <button type="submit" disabled={isLoading}>
+                            Отправить
+                        </button>
+                    </form>
+                    
+                    {messages.length > 1 && (
+                        <div className="chat-actions">
+                            <a 
+                                href="https://wa.me/79001234567?text=Здравствуйте!%20Я%20обратился%20к%20чат-боту%20и%20хотел%20бы%20оформить%20заказ."
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="whatsapp-button"
+                            >
+                                <i className="fab fa-whatsapp"></i> Перейти к заказу в WhatsApp
+                            </a>
+                        </div>
+                    )}
+                </div>
+            );
+        }
+        
+        // Рендерим компонент
+        document.addEventListener('DOMContentLoaded', () => {
+            ReactDOM.render(<AIChat />, document.getElementById('ai-chat-container'));
+        });
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
