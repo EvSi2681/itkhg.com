@@ -160,84 +160,27 @@
             </a>
         </div>
     </footer>
-
-    <!-- ЧАТ-БОТ -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const botName = 'IT Помощник';
-
-            const button = document.createElement('button');
-            button.innerHTML = '💬 ' + botName;
-            button.style.cssText = `
-                position: fixed; bottom: 20px; right: 20px; z-index: 9999;
-                background: #00aaff; color: white; border: none; padding: 12px 20px;
-                border-radius: 50px; font-size: 14px; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-            `;
-
-            const chat = document.createElement('div');
-            chat.innerHTML = `
-                <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; width: 360px; height: 500px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.15); display: none; position: fixed; bottom: 80px; right: 20px; background: white; z-index: 9998;">
-                    <div style="background:#00aaff; color:white; padding:12px; font-weight:bold; text-align:center; cursor:pointer;">💬 ${botName}</div>
-                    <div id="chat-body" style="height:390px; overflow-y:auto; padding:10px; font-size:14px;"></div>
-                    <div style="display:flex; padding:10px; border-top:1px solid #eee;">
-                        <input type="text" placeholder="Спросите о товарах..." style="flex:1; padding:8px; border:1px solid #ccc; border-radius:4px; margin-right:5px; outline:none;" id="user-input"/>
-                        <button id="send-btn" style="background:#00aaff; color:white; border:none; padding:0 10px; border-radius:4px; cursor:pointer;">→</button>
-                    </div>
-                </div>
-            `;
-            document.body.appendChild(button);
-            document.body.appendChild(chat);
-
-            const chatBox = chat.querySelector('div');
-            const chatBody = chat.querySelector('#chat-body');
-            const userInput = chat.querySelector('#user-input');
-            const sendBtn = chat.querySelector('#send-btn');
-
-            button.onclick = () => { 
-                chatBox.style.display = 'block'; 
-                button.style.display = 'none'; 
-            };
-
-            chatBox.children[0].onclick = () => { 
-                chatBox.style.display = 'none'; 
-                button.style.display = 'block'; 
-            };
-
-            function addMessage(text, align, bg) {
-                const msg = document.createElement('div');
-                msg.style.cssText = `margin:8px 0; max-width:80%; padding:8px 12px; border-radius:12px; font-size:14px; line-height:1.4; text-align:${align}; background:${bg}; margin-${align}auto;`;
-                msg.innerText = text;
-                chatBody.appendChild(msg);
-                chatBody.scrollTop = chatBody.scrollHeight;
-            }
-
-            sendBtn.onclick = async () => {
-                const text = userInput.value.trim();
-                if (!text) return;
-                addMessage(text, 'right', '#e3f2fd');
-                userInput.value = '';
-                try {
-                    const response = await fetch('/api/qwen', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ prompt: text })
-                    });
-                    const data = await response.json();
-                    addMessage(data.reply || 'Бот не ответил.', 'left', '#f0f0f0');
-                } catch (err) {
-                    addMessage('Ошибка подключения. Попробуйте позже.', 'left', '#f0f0f0');
-                }
-            };
-
-            userInput.addEventListener('keypress', e => {
-                if (e.key === 'Enter') sendBtn.click();
-            });
-
-            addMessage('Привет! Я — ваш помощник по товарам из Китая. Спросите меня о продукции, доставке или ценах!', 'left', '#f0f0f0');
-        });
+    <div style={{ 
+  maxWidth: '1200px', 
+  margin: '40px auto', 
+  padding: '0 20px',
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '20px'
+}}>
+  <div>
+    <h1 style={{ textAlign: 'center', marginBottom: '20px' }}>Фармацевтический консультант</h1>
+    <p style={{ textAlign: 'center', color: '#666', marginBottom: '30px' }}>
+      Задайте вопрос о препаратах, получите рекомендации и подберите китайские аналоги
+    </p>
+  </div>
+  
+  <AIChat />
+</div>
     </script>
 </body>
 </html>
+
 
 
 
