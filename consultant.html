@@ -181,7 +181,11 @@ function sendMessage() {
     sendButton.textContent = '...';
 
     // Отправляем запрос к вашему API
-    fetch('http://87.121.38.23:5000/api/chat', {
+    const response = await fetch("/api/chat", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ message: userMessage })
+});
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
