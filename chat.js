@@ -1,27 +1,21 @@
-// chat.js
-document.addEventListener('DOMContentLoaded', () => {
-  const chatContainer = document.getElementById('chat-container');
-  const input = document.getElementById('chat-input');
-  const submitBtn = document.getElementById('submit-btn');
+export default async function handler(req, res) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Метод не поддерживается' });
+  }
 
-  submitBtn.addEventListener('click', async () => {
-    if (!input.value.trim()) return;
+  try {
+    const response = await fetch('http://87.121.38.23:5000/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(req.body)
+    });
 
-    // Добавьте сообщение пользователя
-    chatContainer.innerHTML += `
-      <div class="message user">
-        <div>${input.value}</div>
-      </div>
-    `;
-    input.value = '';
+    const data = await response.json();
+    res.status(200).json(data);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Не удалось связаться с AI' });
+  }
+}
 
-    // Моделирование ответа от Ollama (замените на реальный API)
-    setTimeout(() => {
-      chatContainer.innerHTML += `
-        <div class="message assistant">
-          <div>Извините, чат временно недоступен. Попробуйте позже.</div>
-        </div>
-      `;
-    }, 1000);
-  });
-});
+export const config = { runtime: 'edge' };
