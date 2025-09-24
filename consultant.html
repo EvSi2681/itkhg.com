@@ -1,221 +1,66 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Ваш фармацевтический консультант AI — ITK Health Goods</title>
-    <meta name="description" content="Получите индивидуальную рекомендацию от AI-консультанта по подбору БАДов и косметики из Китая."/>
-    
-    <!-- SEO: связь с английской версией -->
-    <link rel="alternate" hreflang="en" href="https://www.itkhg.com/en_consultant.html">
-    <link rel="alternate" hreflang="ru" href="https://www.itkhg.com/consultant.html">
-    <link rel="canonical" href="https://www.itkhg.com/consultant.html" />
+<div class="consultant-section">
+  <!-- Логотип -->
+  <img src="https://i.postimg.cc/1zPrLjFb/8.png" alt="AI Consultant Logo" id="ai-logo">
 
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', sans-serif;
-            color: #333;
-            background: 
-                linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
-                url('https://i.postimg.cc/QMsCCbxB/image.png') no-repeat center center fixed;
-            background-size: cover;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
+  <!-- Заголовок -->
+  <h2>Ваш фармацевтический консультант AI IWIT</h2>
+  <p>Напишите, что вас беспокоит — я подберу оптимальное решение.</p>
 
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 12px;
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 800px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
+  <!-- Чат -->
+  <div id="chat-container">
+    <div id="messages"></div>
+    <input type="text" id="user-input" placeholder="Введите ваш вопрос..." />
+    <button onclick="sendQuery()">Отправить</button>
+  </div>
 
-        h1 {
-            color: #2c5e3c;
-            margin: 0 0 10px 0;
-        }
+  <!-- Скрипт чата -->
+  <script>
+    async function sendQuery() {
+      const input = document.getElementById("user-input");
+      const messages = document.getElementById("messages");
 
-        p {
-            margin: 10px 0;
-        }
+      const userMessage = input.value.trim();
+      if (!userMessage) return;
 
-        nav {
-            text-align: center;
-            margin: 10px 0;
-        }
+      // Показываем сообщение пользователя
+      messages.innerHTML += `<p><strong>Вы:</strong> ${userMessage}</p>`;
 
-        nav a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #2c5e3c;
-            font-weight: bold;
-        }
+      try {
+        // Отправляем запрос на ваш API через Vercel-прокси
+        const response = await fetch("/api/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ message: userMessage })
+        });
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+        const data = await response.json();
+        const reply = data.reply || "Не удалось получить ответ.";
 
-        .consultant-section {
-            max-width: 800px;
-            margin: 30px auto;
-            padding: 30px;
-            background: rgba(255, 255, 255, 0.97);
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-            text-align: center;
-            line-height: 1.7;
-        }
+        // Показываем ответ ИИ
+        messages.innerHTML += `<p><strong>AI:</strong> ${reply}</p>`;
 
-        .consultant-section img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-            border: 3px solid #2c5e3c;
-        }
+        // Кнопка WhatsApp
+        const phone = "+79871149378";
+        const waMsg = encodeURIComponent(`Здравствуйте, интересует средство: ${userMessage}`);
+        messages.innerHTML += `
+          <p style="text-align: center; margin-top: 15px;">
+            <a href="https://wa.me/${phone}?text=${waMsg}" target="_blank" style="background-color: #25D366; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">
+              💬 Написать в WhatsApp
+            </a>
+          </p>`;
+      } catch (error) {
+        messages.innerHTML += `<p><strong>Ошибка:</strong> Не удалось связаться с консультантом. Попробуйте позже.</p>`;
+        console.error("Ошибка чата:", error);
+      }
 
-        .whatsapp-btn {
-            display: inline-block;
-            margin: 20px 0;
-            padding: 14px 28px;
-            background-color: #25D366;
-            color: white !important;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            font-size: 16px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-            transition: background-color 0.3s ease;
-        }
+      // Очистка поля ввода и прокрутка вниз
+      input.value = "";
+      messages.scrollTop = messages.scrollHeight;
+    }
 
-        .whatsapp-btn:hover {
-            background-color: #128C7E;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.95);
-            font-size: 14px;
-            color: #666;
-            margin-top: auto;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Ваш фармацевтический консультант AI</h1>
-        <p>ITKN x IWIT — Подбор решений на основе знаний о китайской продукции</p>
-        <a href="en_consultant.html" style="position: absolute; top: 20px; right: 20px; color: white; text-decoration: none; font-size: 16px;">Eng</a>
-    </header>
-
-    <nav>
-        <a href="index.html">Главная</a>
-        <a href="catalog.html">Каталог</a>
-        <a href="request.html">Запрос из Китая</a>
-        <a href="blog.html">Блог</a>
-        <a href="medicine_in_china.html">Современная медицина в Китае</a>
-        <a href="consultant.html">AI-консультант</a>
-        <a href="contacts.html">Контакты</a>
-    </nav>
-
-    <main>
-        <div class="consultant-section">
-    <!-- Логотип -->
-    <img src="https://i.postimg.cc/1zPrLjFb/8.png" alt="IWIT AI Consultant Logo" id="ai-logo">
-
-    <h2>Ваш AI-консультант от IWIT</h2>
-    <p style="margin-bottom: 20px;">Расскажите мне, что вас беспокоит — я помогу подобрать оптимальное решение.</p>
-
-    <!-- Чат-контейнер -->
-    <div id="chat-container" style="height: 300px; overflow-y: auto; border: 1px solid #ddd; border-radius: 8px; padding: 10px; background: #f9f9f9; margin-bottom: 15px; text-align: left;">
-        <p><strong>AI:</strong> Здравствуйте! Я — ваш консультант по китайским средствам. Как могу помочь?</p>
-    </div>
-
-    <!-- Поле ввода -->
-    <div style="display: flex; gap: 10px;">
-        <input type="text" id="user-input" placeholder="Введите ваш вопрос..." 
-               style="flex-grow: 1; padding: 10px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px;">
-        <button onclick="sendMessage()" style="padding: 10px 20px; background-color: #2c5e3c; color: white; border: none; border-radius: 6px; cursor: pointer;">
-            Отправить
-        </button>
-    </div>
-
-    <!-- Кнопка WhatsApp (изначально скрыта) -->
-    <a href="https://wa.me/79871149378" id="whatsapp-btn" class="whatsapp-btn" style="display: none; margin-top: 20px;">
-        💬 Перейти в WhatsApp для заказа
-    </a>
-
-    <p><em><small>Примечание: Консультация носит информационный характер. Не является диагнозом или лечением.</small></em></p>
-</div>
-    </main>
-
-    <footer>
-        <p>© 2025 ITTM. Все права защищены.</p>
-        <p>Сайт не является аптекой. Не заменяет консультацию врача.</p>
-        <p>Для деловых вопросов: <a href="mailto:i.t.t.m@qq.com">i.t.t.m@qq.com</a></p>
-    </footer>
-    <script>
-const chatContainer = document.getElementById('chat-container');
-const userInput = document.getElementById('user-input');
-const whatsappBtn = document.getElementById('whatsapp-btn');
-
-// Функция отправки сообщения
-function sendMessage() {
-    const message = userInput.value.trim();
-    if (message === '') return;
-
-    // Показываем сообщение пользователя
-    addMessage('Вы', message);
-    userInput.value = '';
-
-    // Блокируем ввод
-    const sendButton = document.querySelector('button[onclick="sendMessage()"]');
-    sendButton.disabled = true;
-    sendButton.textContent = '...';
-
-    // Отправляем запрос к вашему API
-    const response = await fetch("/api/chat", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ message: userMessage })
-});
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ message: message })
-    })
-    .then(response => response.json())
-    .then(data => {
-        addMessage('AI', data.reply);
-        // Показываем кнопку WhatsApp после первого ответа ИИ
-        whatsappBtn.style.display = 'inline-block';
-    })
-    .catch(error => {
-        console.error('Ошибка:', error);
-        addMessage('AI', 'Извините, произошла ошибка при подключении к консультанту.');
-    })
-    .finally(() => {
-        // Разблокируем ввод
-        sendButton.disabled = false;
-        sendButton.textContent = 'Отправить';
+    // Разрешаем отправку по нажатию Enter
+    document.getElementById("user-input").addEventListener("keypress", function(e) {
+      if (e.key === "Enter") sendQuery();
     });
-}
-
-// Функция добавления сообщения в чат
-function addMessage(sender, text) {
-    const messageElement = document.createElement('p');
-    messageElement.innerHTML = `<strong>${sender}:</strong> ${text}`;
-    chatContainer.appendChild(messageElement);
-    chatContainer.scrollTop = chatContainer.scrollHeight;
-}
-</script>
-</body>
-</html>
+  </script>
+</div>
