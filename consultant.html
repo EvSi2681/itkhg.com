@@ -27,11 +27,11 @@
 
       try {
         // Отправляем запрос на ваш API через Vercel-прокси
-        const response = await fetch("/api/chat", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ message: userMessage })
-        });
+        fetch('/api/chat', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ message: userMessage })
+});
 
         const data = await response.json();
         const reply = data.reply || "Не удалось получить ответ.";
