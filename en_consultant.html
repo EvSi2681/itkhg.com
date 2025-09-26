@@ -1,36 +1,202 @@
-<div style="text-align: center; margin: 30px 0;">
-  <a href="https://t.me/ITKHealthGoods_bot" target="_blank" rel="noopener noreferrer">
-    <button style="
-      padding: 14px 28px;
-      background: #0088cc;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Consultant — ITKHG</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: url('https://i.postimg.cc/50XytzHD/translucent-image.png') center/cover fixed;
+      background-blend-mode: soft-light;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      color: #333;
+    }
+
+    nav {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(8px);
+      padding: 16px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #2c5e3c;
+      font-weight: 600;
+      font-size: 16px;
+      transition: color 0.3s ease, transform 0.2s ease;
+      white-space: nowrap;
+    }
+
+    nav a:hover {
+      color: #0088cc;
+      transform: translateY(-2px);
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .consultant-card {
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 16px;
+      padding: 40px 30px;
+      max-width: 600px;
+      width: 90%;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .consultant-card h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #2c5e3c;
+    }
+
+    .consultant-button {
+      padding: 16px 32px;
+      background: linear-gradient(135deg, #0088cc, #006699);
       color: white;
       border: none;
-      border-radius: 8px;
+      border-radius: 12px;
       font-size: 18px;
       font-weight: bold;
       cursor: pointer;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      transition: background 0.3s;
-    " onmouseover="this.style.background='#006699'" onmouseout="this.style.background='#0088cc'">
-      💬 Chat with us on Telegram
-    </button>
-  </a>
-  <p style="margin-top: 12px; color: #555; font-size: 14px;">
-    Click to connect with our AI consultant and find the right product for your needs
-  </p>
-</div>
+      box-shadow: 0 6px 16px rgba(0, 136, 204, 0.4);
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-   <footer>
-        <p>&copy; 2025 ITTM. All rights reserved.</p>
-        <p>The site is not a pharmacy. Does not replace medical advice.</p>
-        <p>For business inquiries: <a href="mailto:i.t.t.m@qq.com">i.t.t.m@qq.com</a></p>
-        <div style="margin-top: 15px; text-align: center; font-size: 14px; color: #666;">
-    <strong>Website development:</strong>
-    <a href="mailto:iwit.company.l@gmail.com" style="text-decoration: none; color: #2c5e3c;">
-        <img src="https://i.postimg.cc/1zPrLjFb/8.png" alt="Developer logo" width="30" style="vertical-align: middle; margin: 0 5px;">
+    .consultant-button:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0, 136, 204, 0.6);
+      background: linear-gradient(135deg, #0077b3, #005580);
+    }
+
+    .consultant-button:active {
+      transform: translateY(0);
+    }
+
+    .consultant-note {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    footer {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(8px);
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #555;
+      margin-top: auto;
+    }
+
+    footer p {
+      margin: 6px 0;
+    }
+
+    footer a {
+      color: #2c5e3c;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    footer a:hover {
+      color: #0088cc;
+      text-decoration: underline;
+    }
+
+    .dev-credit {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .dev-credit img {
+      vertical-align: middle;
+      width: 30px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="catalog.html">Catalog</a>
+    <a href="request.html">Request from China</a>
+    <a href="blog.html">Blog</a>
+    <a href="medicine_in_china.html">Modern Medicine in China</a>
+    <a href="en_consultant.html">AI Consultant</a>
+    <a href="contacts.html">Contacts</a>
+  </nav>
+
+  <main>
+    <div class="consultant-card">
+      <h1>💬 Consult via Telegram</h1>
+      <a href="https://t.me/ITKHealthGoods_EN_bot" target="_blank" rel="noopener noreferrer">
+        <button class="consultant-button">
+          💬 Start Consultation
+        </button>
+      </a>
+      <p class="consultant-note">
+        Click to connect with our AI consultant and find the right natural health product based on Traditional Chinese Wellness principles.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 ITTM. All rights reserved.</p>
+    <p>This website is not a pharmacy. Does not replace medical advice.</p>
+    <p>For business inquiries: <a href="mailto:i.t.t.m@qq.com">i.t.t.m@qq.com</a></p>
+    <div class="dev-credit">
+      <strong>Website development:</strong>
+      <a href="mailto:iwit.company.l@gmail.com">
+        <img src="https://i.postimg.cc/1zPrLjFb/8.png" alt="Developer logo" />
         IWIT
-    </a>
-</div>
-    </footer>
+      </a>
+    </div>
+  </footer>
+
 </body>
 </html>
