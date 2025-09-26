@@ -1,66 +1,21 @@
-<div class="consultant-section">
-  <!-- Логотип -->
-  <img src="https://i.postimg.cc/1zPrLjFb/8.png" alt="AI Consultant Logo" id="ai-logo">
-
-  <!-- Заголовок -->
-  <h2>Ваш фармацевтический консультант AI IWIT</h2>
-  <p>Напишите, что вас беспокоит — я подберу оптимальное решение.</p>
-
-  <!-- Чат -->
-  <div id="chat-container">
-    <div id="messages"></div>
-    <input type="text" id="user-input" placeholder="Введите ваш вопрос..." />
-    <button onclick="sendQuery()">Отправить</button>
-  </div>
-
-  <!-- Скрипт чата -->
-  <script>
-    async function sendQuery() {
-      const input = document.getElementById("user-input");
-      const messages = document.getElementById("messages");
-
-      const userMessage = input.value.trim();
-      if (!userMessage) return;
-
-      // Показываем сообщение пользователя
-      messages.innerHTML += `<p><strong>Вы:</strong> ${userMessage}</p>`;
-
-      try {
-        // Отправляем запрос на ваш API через Vercel-прокси
-        fetch('/api/chat', {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({ message: userMessage })
-});
-
-        const data = await response.json();
-        const reply = data.reply || "Не удалось получить ответ.";
-
-        // Показываем ответ ИИ
-        messages.innerHTML += `<p><strong>AI:</strong> ${reply}</p>`;
-
-        // Кнопка WhatsApp
-        const phone = "+79871149378";
-        const waMsg = encodeURIComponent(`Здравствуйте, интересует средство: ${userMessage}`);
-        messages.innerHTML += `
-          <p style="text-align: center; margin-top: 15px;">
-            <a href="https://wa.me/${phone}?text=${waMsg}" target="_blank" style="background-color: #25D366; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">
-              💬 Написать в WhatsApp
-            </a>
-          </p>`;
-      } catch (error) {
-        messages.innerHTML += `<p><strong>Ошибка:</strong> Не удалось связаться с консультантом. Попробуйте позже.</p>`;
-        console.error("Ошибка чата:", error);
-      }
-
-      // Очистка поля ввода и прокрутка вниз
-      input.value = "";
-      messages.scrollTop = messages.scrollHeight;
-    }
-
-    // Разрешаем отправку по нажатию Enter
-    document.getElementById("user-input").addEventListener("keypress", function(e) {
-      if (e.key === "Enter") sendQuery();
-    });
-  </script>
+<div style="text-align: center; margin: 30px 0;">
+  <a href="https://t.me/ITKHealthGoods_bot" target="_blank" rel="noopener noreferrer">
+    <button style="
+      padding: 14px 28px;
+      background: #0088cc;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: background 0.3s;
+    " onmouseover="this.style.background='#006699'" onmouseout="this.style.background='#0088cc'">
+      💬 Проконсультироваться в Telegram
+    </button>
+  </a>
+  <p style="margin-top: 12px; color: #555; font-size: 14px;">
+    Нажмите, чтобы связаться с нашим AI консультантом и подобрать подходящее средство
+  </p>
 </div>
