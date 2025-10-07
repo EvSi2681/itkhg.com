@@ -4,7 +4,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const API_URL = "http://87.121.38.23:5000/send"; {
+    const API_URL = "http://87.121.38.23:3000/chat/send"; {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(req.body)
