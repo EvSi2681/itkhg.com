@@ -4,7 +4,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const API_URL = "https://itkhg.com:5000/send"; {
+    const API_URL = "https://itkhg.com/chat/send"; {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(req.body)
