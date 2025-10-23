@@ -5,41 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Поддержка сердечно-сосудистой системы — ITK Health Goods</title>
     <meta name="description" content="Товары для поддержки сердца и сосудов из Китая."/>
+    <link rel="stylesheet" href="styles.css"/>
+
     <style>
-        /* === КРИТИЧЕСКИЕ ИСПРАВЛЕНИЯ === */
-        html {
-            overflow-y: scroll; /* Всегда показывать скроллбар → нет "прыжков" ширины */
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', sans-serif;
-            color: #333;
-            background: 
-                linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
-                url('/images/1-3.png') no-repeat center center fixed;
-            background-size: cover;
-            min-height: 100vh;
-            position: relative; /* для абсолютного footer'а */
-        }
-
-        /* Основной контейнер контента */
-        .page-wrapper {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px 15px 100px; /* 100px — отступ под footer */
-            box-sizing: border-box;
+      body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+    url('/images/1-3.png') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
         }
 
         header {
             background: rgba(255, 255, 255, 0.95);
             border-radius: 12px;
             padding: 20px;
-            margin-bottom: 20px;
+            margin: 20px auto;
+            max-width: 800px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             text-align: center;
-            position: relative;
         }
 
         h1 {
@@ -53,11 +41,11 @@
 
         nav {
             text-align: center;
-            margin: 10px 0 20px;
+            margin: 10px 0;
         }
 
         nav a {
-            margin: 0 8px;
+            margin: 0 10px;
             text-decoration: none;
             color: #2c5e3c;
             font-weight: bold;
@@ -67,111 +55,88 @@
             text-decoration: underline;
         }
 
-        .search-form {
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        .search-form input {
-            padding: 10px;
-            width: 300px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-        }
-
-        .search-form button {
-            padding: 10px 15px;
-            background: #2c5e3c;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            margin-left: 8px;
-        }
-
         .product-container {
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 0 15px;
-        }
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
 
-        .product {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            text-align: left;
-        }
+.product {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
+}
 
-        .product img {
-            max-width: 150px;
-            height: auto;
-            border-radius: 8px;
-            display: block;
-            margin: 0 auto 15px auto;
-            transition: transform 0.3s ease;
-        }
+.product img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto 15px auto;
+}
 
-        .product img:hover {
-            transform: scale(2.5);
-        }
+.whatsapp-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 24px;
+    background-color: #25D366;
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+    width: fit-content;
+}
+.product img {
+        max-width: 150px;
+        height: auto;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+    }
 
-        .whatsapp-btn {
-            display: block;
-            margin: 20px auto;
-            padding: 12px 24px;
-            background-color: #25D366;
-            color: white !important;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            font-family: 'Segoe UI', sans-serif;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: background-color 0.3s ease;
-            width: fit-content;
-        }
-
+    .product img:hover {
+        transform: scale(2.5);
+    }
         .whatsapp-btn:hover {
             background-color: #128C7E;
         }
 
         footer {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
             text-align: center;
             padding: 20px;
             background: rgba(255, 255, 255, 0.95);
             font-size: 14px;
             color: #666;
+            margin-top: auto;
         }
     </style>
 </head>
 <body>
-    <div class="page-wrapper">
-        <header>
-            <h1>Поддержка сердечно-сосудистой системы</h1>
-            <p>Товары для кровообращения и здоровья сосудов</p>
-            <a href="en_heart.html" style="position: absolute; top: 20px; right: 20px; color: white; text-decoration: none; font-size: 16px;">Eng</a>
-        </header>
+    <header>
+        <h1>Поддержка сердечно-сосудистой системы</h1>
+        <p>Товары для кровообращения и здоровья сосудов</p>
+        <a href="en_heart.html" style="position: absolute; top: 20px; right: 20px; color: white; text-decoration: none; font-size: 16px;">Eng</a>
+    </header>
 
-        <nav>
-            <a href="index.html">Главная</a>
-            <a href="catalog.html">Каталог</a>
-            <a href="request.html">Запрос из Китая</a>
-            <a href="blog.html">Блог</a>
-            <a href="medicine_in_china.html">Современная медицина в Китае</a>
-            <a href="consultant.html">AI-консультант</a>
-            <a href="contacts.html">Контакты</a>
-        </nav>
-
-        <form action="catalog.html" method="get" class="search-form">
-            <input type="text" name="search" placeholder="Поиск по каталогу...">
-            <button type="submit">🔍</button>
-        </form>
-
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="request.html">Запрос из Китая</a>
+        <a href="blog.html">Блог</a>
+        <a href="medicine_in_china.html">Современная медицина в Китае</a>
+        <a href="consultant.html">AI-консультант</a>
+        <a href="contacts.html">Контакты</a>
+    </nav>
+<form action="catalog.html" method="get" style="text-align: center; margin: 20px 0;">
+    <input type="text" name="search" placeholder="Поиск по каталогу..." style="padding: 10px; width: 300px; border: 1px solid #ccc; border-radius: 6px;">
+    <button type="submit" style="padding: 10px 15px; background: #2c5e3c; color: white; border: none; border-radius: 6px;">🔍</button>
+</form>
     <main> 
         <!-- 24. 柏子滋心丸 — Бай Цзы Цзы Син Ван -->
 <div class="product-container">
@@ -201,6 +166,7 @@
     <p><em>БАД. Не является лекарством. Для поддержки нервной системы, сна и здоровья сердца по ТКМ.</em></p>
     <a href="https://wa.me/79871149378?text=Здравствуйте!%20Хочу%20узнать%20о%20Бай%20Цзы%20Цзы%20Син%20Ван" class="whatsapp-btn">Узнать в WhatsApp</a>
   </div>
+ </div>
 <!-- 25. 天王补心丸 — Тянь Ван Бу Син Ван -->
 <div class="product-container">
   <div class="product">
@@ -229,6 +195,7 @@
     <p><em>БАД. Не является лекарством. Для поддержки нервной системы, сна и здоровья сердца по ТКМ.</em></p>
     <a href="https://wa.me/79871149378?text=Здравствуйте!%20Хочу%20узнать%20о%20Тянь%20Ван%20Бу%20Син%20Ван" class="whatsapp-btn">Узнать в WhatsApp</a>
   </div>
+ </div>
 <!-- 31. 血府逐瘀丸 — Сюэ Фу Чжу Юй Ван -->
 <div class="product-container">
   <div class="product">
@@ -257,6 +224,7 @@
     <p><em>БАД. Не является лекарством. Для поддержки кровообращения и рассеивания застоя крови по ТКМ.</em></p>
     <a href="https://wa.me/79871149378?text=Здравствуйте!%20Хочу%20узнать%20о%20Сюэ%20Фу%20Чжу%20Юй%20Ван" class="whatsapp-btn">Узнать в WhatsApp</a>
   </div>
+ </div>
 <!-- 44. 脉管复康片 — Май Гуань Фу Кан Пянь -->
 <div class="product-container">
   <div class="product">
@@ -285,6 +253,7 @@
     <p><em>БАД. Не является лекарством. Для поддержки кровообращения и восстановления после сосудистых заболеваний.</em></p>
     <a href="https://wa.me/79871149378?text=Здравствуйте!%20Хочу%20узнать%20о%20Май%20Гуань%20Фу%20Кан%20Пянь" class="whatsapp-btn">Узнать в WhatsApp</a>
   </div>
+ </div>
 <!-- 45. 脑心通胶囊 — Нао Син Тун Цзяо Нан -->
 <div class="product-container">
   <div class="product">
@@ -313,6 +282,7 @@
     <p><em>БАД. Не является лекарством. Для поддержки кровообращения в мозге и сердце.</em></p>
     <a href="https://wa.me/79871149378?text=Здравствуйте!%20Хочу%20узнать%20о%20Нао%20Син%20Тун%20Цзяо%20Нан" class="whatsapp-btn">Узнать в WhatsApp</a>
   </div>
+ </div>
 <!-- 48. 正天丸 — Чжэн Тянь Ван -->
 <div class="product-container">
   <div class="product">
@@ -341,6 +311,7 @@
     <p><em>БАД. Не является лекарством. Для поддержки здоровья головного мозга и облегчения головных болей.</em></p>
     <a href="https://wa.me/79871149378?text=Здравствуйте!%20Хочу%20узнать%20о%20Чжэн%20Тянь%20Ван" class="whatsapp-btn">Узнать в WhatsApp</a>
   </div>
+ </div>
 <!-- 50. 牛黄降压丸 — Ню Хуан Цзян Я Ван -->
 <div class="product-container">
   <div class="product">
@@ -369,6 +340,7 @@
     <p><em>БАД. Не является лекарством. Для поддержки здоровья сердечно-сосудистой системы и нормализации давления.</em></p>
     <a href="https://wa.me/79871149378?text=Здравствуйте!%20Хочу%20узнать%20о%20Ню%20Хуан%20Цзян%20Я%20Ван" class="whatsapp-btn">Узнать в WhatsApp</a>
   </div>
+ </div>
 <!-- 59. 银杏叶片 — Инь Синь Е Пянь -->
 <div class="product-container">
   <div class="product">
@@ -397,6 +369,7 @@
     <p><em>БАД. Не является лекарством. Для поддержки кровообращения в мозге и улучшения когнитивных функций.</em></p>
     <a href="https://wa.me/79871149378?text=Здравствуйте!%20Хочу%20узнать%20о%20Инь%20Синь%20Е%20Пянь" class="whatsapp-btn">Узнать в WhatsApp</a>
   </div>
+ </div>
 <!-- 77. 通心络胶囊 — Тун Син Ло Цзяо Нан -->
 <div class="product-container">
   <div class="product">
@@ -425,6 +398,7 @@
     <p><em>БАД. Не является лекарством. Для поддержки кровообращения в мозге и сердце.</em></p>
     <a href="https://wa.me/79871149378?text=Здравствуйте!%20Хочу%20узнать%20о%20Тун%20Син%20Ло%20Цзяо%20Нан" class="whatsapp-btn">Узнать в WhatsApp</a>
   </div>
+ </div>
 <!-- 13. 臻妍® 银杏叶绞股蓝片 — Чжэнь Янь® Инь Синь Е Цзе Гу Лань Пянь -->
 <div class="product-container">
   <div class="product">
@@ -453,6 +427,7 @@
     <p><em>БАД. Не является лекарством. Для поддержки кровообращения в мозге и улучшения когнитивных функций.</em></p>
     <a href="https://wa.me/79871149378?text=Здравствуйте!%20Хочу%20узнать%20о%20Чжэнь%20Янь%C2%AE%20Инь%20Синь%20Е%20Цзе%20Гу%20Лань%20Пянь" class="whatsapp-btn">Узнать в WhatsApp</a>
   </div>
+ </div>
 <!-- 4. 速效救心丸 — Су Сяо Цзю Синь Ван -->
 <div class="product-container">
   <div class="product">
@@ -481,6 +456,7 @@
     <p><em>БАД. Не является лекарством. Для поддержки здоровья сердца и облегчения симптомов стенокардии.</em></p>
     <a href="https://wa.me/79871149378?text=Здравствуйте!%20Хочу%20узнать%20о%20Су%20Сяо%20Цзю%20Синь%20Ван" class="whatsapp-btn">Узнать в WhatsApp</a>
   </div>
+ </div>
 <!-- 39. 汤恩倍牌辅酶Q10软胶囊 — Тан Энь Бэй Пай Фу Мэй Q10 Жуань Цзяо Нан -->
 <div class="product-container">
   <div class="product">
@@ -509,6 +485,7 @@
     <p><em>БАД. Не является лекарством. Для поддержки здоровья сердца и антиоксидантной защиты организма.</em></p>
     <a href="https://wa.me/79871149378?text=Здравствуйте!%20Хочу%20узнать%20о%20Тан%20Энь%20Бэй%20Пай%20Фу%20Мэй%20Q10%20Жуань%20Цзяо%20Нан" class="whatsapp-btn">Узнать в WhatsApp</a>
   </div>
+ </div>
 <!-- 42. 丹参破壁饮片 — Дан Шэнь По Би Инь Пянь -->
 <div class="product-container">
   <div class="product">
@@ -537,6 +514,7 @@
     <p><em>БАД. Не является лекарством. Для поддержки кровообращения и профилактики сердечно-сосудистых заболеваний.</em></p>
     <a href="https://wa.me/79871149378?text=Здравствуйте!%20Хочу%20узнать%20о%20Дан%20Шэнь%20По%20Би%20Инь%20Пянь" class="whatsapp-btn">Узнать в WhatsApp</a>
   </div>
+ </div>
 <!-- 51. 银杏茶 — Инь Синь Ча -->
 <div class="product-container">
   <div class="product">
@@ -565,6 +543,7 @@
     <p><em>БАД. Не является лекарством. Для поддержки кровообращения в мозге и улучшения когнитивных функций.</em></p>
     <a href="https://wa.me/79871149378?text=Здравствуйте!%20Хочу%20узнать%20о%20Инь%20Синь%20Ча" class="whatsapp-btn">Узнать в WhatsApp</a>
   </div>
+ </div>
 <!-- 48. 福尔® 鱼油软胶囊 — Фуэр® Рыбий жир, мягкие капсулы -->
 <div class="product-container">
   <div class="product">
@@ -610,15 +589,4 @@
 </footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
 
