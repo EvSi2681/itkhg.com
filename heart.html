@@ -1,145 +1,44 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Поддержка сердечно-сосудистой системы — ITK Health Goods</title>
-    <meta name="description" content="Товары для поддержки сердца и сосудов из Китая."/>
-    <link rel="stylesheet" href="styles.css"/>
 
-    <style>
-        html {
-    overflow-y: scroll;
-  }
-            body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  color: #333;
-  background: 
-    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
-    url('/images/1-3.png') no-repeat center center fixed;
-  background-size: cover;
-  min-height: 100vh;
-        }
-
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 12px;
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 800px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        h1 {
-            color: #2c5e3c;
-            margin: 0 0 10px 0;
-        }
-
-        p {
-            margin: 10px 0;
-        }
-
-        nav {
-            text-align: center;
-            margin: 10px 0;
-        }
-
-        nav a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #2c5e3c;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        .product-container {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 0 15px;
-}
-
-.product {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 15px;
-    margin: 20px 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    text-align: left;
-}
-
-.product img {
-    max-width: 150px;
-    height: auto;
-    border-radius: 8px;
-    display: block;
-    margin: 0 auto 15px auto;
-}
-
-.whatsapp-btn {
-    display: block;
-    margin: 20px auto;
-    padding: 12px 24px;
-    background-color: #25D366;
-    color: white !important;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    font-family: 'Segoe UI', sans-serif;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: background-color 0.3s ease;
-    width: fit-content;
-}
-.product img {
-        max-width: 150px;
-        height: auto;
-        border-radius: 8px;
-        transition: transform 0.3s ease;
-    }
-
-    .product img:hover {
-        transform: scale(2.5);
-    }
         .whatsapp-btn:hover {
             background-color: #128C7E;
         }
 
         footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
             text-align: center;
             padding: 20px;
             background: rgba(255, 255, 255, 0.95);
             font-size: 14px;
             color: #666;
-            margin-top: auto;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Поддержка сердечно-сосудистой системы</h1>
-        <p>Товары для кровообращения и здоровья сосудов</p>
-        <a href="en_heart.html" style="position: absolute; top: 20px; right: 20px; color: white; text-decoration: none; font-size: 16px;">Eng</a>
-    </header>
+    <div class="page-wrapper">
+        <header>
+            <h1>Поддержка сердечно-сосудистой системы</h1>
+            <p>Товары для кровообращения и здоровья сосудов</p>
+            <a href="en_heart.html" style="position: absolute; top: 20px; right: 20px; color: white; text-decoration: none; font-size: 16px;">Eng</a>
+        </header>
 
-    <nav>
-        <a href="index.html">Главная</a>
-        <a href="catalog.html">Каталог</a>
-        <a href="request.html">Запрос из Китая</a>
-        <a href="blog.html">Блог</a>
-        <a href="medicine_in_china.html">Современная медицина в Китае</a>
-        <a href="consultant.html">AI-консультант</a>
-        <a href="contacts.html">Контакты</a>
-    </nav>
-<form action="catalog.html" method="get" style="text-align: center; margin: 20px 0;">
-    <input type="text" name="search" placeholder="Поиск по каталогу..." style="padding: 10px; width: 300px; border: 1px solid #ccc; border-radius: 6px;">
-    <button type="submit" style="padding: 10px 15px; background: #2c5e3c; color: white; border: none; border-radius: 6px;">🔍</button>
-</form>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="request.html">Запрос из Китая</a>
+            <a href="blog.html">Блог</a>
+            <a href="medicine_in_china.html">Современная медицина в Китае</a>
+            <a href="consultant.html">AI-консультант</a>
+            <a href="contacts.html">Контакты</a>
+        </nav>
+
+        <form action="catalog.html" method="get" class="search-form">
+            <input type="text" name="search" placeholder="Поиск по каталогу...">
+            <button type="submit">🔍</button>
+        </form>
     <main> 
         <!-- 24. 柏子滋心丸 — Бай Цзы Цзы Син Ван -->
 <div class="product-container">
@@ -578,6 +477,7 @@
 </footer>
 </body>
 </html>
+
 
 
 
