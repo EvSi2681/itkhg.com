@@ -13,7 +13,6 @@
       font-family: 'Segoe UI', sans-serif;
     }
 
-    /* === Видео на весь экран === */
     .full-video {
       position: relative;
       width: 100%;
@@ -34,7 +33,6 @@
       z-index: 1;
     }
 
-    /* Навигация — фиксированная сверху */
     .top-nav {
       position: fixed;
       top: 0;
@@ -61,7 +59,6 @@
       color: #a8d8b9;
     }
 
-    /* Бургер-кнопка (только на мобильных) */
     .burger-menu {
       display: none;
       position: absolute;
@@ -89,7 +86,6 @@
       transition: all 0.3s ease;
     }
 
-    /* Текст поверх видео */
     .video-overlay {
       position: absolute;
       top: 50%;
@@ -116,7 +112,6 @@
       margin-bottom: 30px;
     }
 
-    /* === Блок под видео — с фоновым фото === */
     .content-section {
       background: 
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -125,6 +120,7 @@
       padding: 80px 20px;
       color: white;
       text-align: center;
+      margin-top: 20px; 
     }
 
     .content-section h2 {
@@ -176,7 +172,6 @@
       text-decoration: none;
     }
 
-    /* === Адаптив: мобильные устройства === */
     @media (max-width: 768px) {
       .top-nav {
         position: fixed;
@@ -245,14 +240,12 @@
 </head>
 <body>
 
-  <!-- Видео на весь экран -->
   <section class="full-video">
     <video autoplay muted loop playsinline>
       <source src="/videos/Hong Kong night.mp4" type="video/mp4">
       Ваш браузер не поддерживает видео.
     </video>
 
-    <!-- Фиксированная навигация + бургер -->
     <nav class="top-nav">
       <a href="index.html">Главная</a>
       <a href="catalog.html">Каталог</a>
@@ -270,15 +263,13 @@
       <span></span>
     </button>
 
-    <!-- Текст поверх видео -->
     <div class="video-overlay">
       <h1>Оптовые поставки из Китая — быстро, надёжно, без посредников</h1>
       <p>Перевели рубли — получили товар. Без задержек, таможенных споров и рисков.</p>
     </div>
   </section>
 
-  <!-- Блок с фоновым фото -->
-  <section class="content-section">
+   <section class="content-section">
     <h2>Перевели рубли — получили товар из Китая. Без сложностей.</h2>
     <p>
       Мы знаем, с какими трудностями сталкиваются предприниматели в России при закупках из Китая: 
@@ -303,18 +294,17 @@
 
   <footer>
     <p>© 2025 ITTM. Все права защищены.</p>
-        <p>Сайт не является аптекой. Не заменяет консультацию врача.</p>
-        <p>Для деловых вопросов: <a href="mailto:i.t.t.m@qq.com">i.t.t.m@qq.com</a></p>
-        <div style="margin-top: 15px; text-align: center; font-size: 14px; color: #666;">
-            <strong>Разработка сайта:</strong>
-            <a href="mailto:iwit.company.l@gmail.com" style="text-decoration: none; color: #2c5e3c;">
-                <img src="/images/3-1.png" alt="Логотип разработчика" width="30" style="vertical-align: middle; margin: 0 5px;">
-                IWIT
-            </a>
-        </div>
-    </footer>
+    <p>Сайт не является аптекой. Не заменяет консультацию врача.</p>
+    <p>Для деловых вопросов: <a href="mailto:i.t.t.m@qq.com">i.t.t.m@qq.com</a></p>
+    <div style="margin-top: 15px; text-align: center; font-size: 14px; color: #666;">
+      <strong>Разработка сайта:</strong>
+      <a href="mailto:iwit.company.l@gmail.com" style="text-decoration: none; color: #2c5e3c;">
+        <img src="/images/3-1.png" alt="Логотип разработчика" width="30" style="vertical-align: middle; margin: 0 5px;">
+        IWIT
+      </a>
+    </div>
+  </footer>
 
-  <!-- JavaScript для бургер-меню -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const burger = document.querySelector('.burger-menu');
