@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Оптовые поставки из Китая — ITK Health Goods</title>
+  <meta name="description" content="Надёжные оптовые поставки товаров традиционной китайской медицины из Китая в Россию. Перевели рубли — получили товар без посредников и проблем.">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* === Видео-шапка === */
+    .hero-video {
+      position: relative;
+      width: 100%;
+      height: 60vh;
+      overflow: hidden;
+    }
+
+    .hero-video video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    /* Навигация — десктоп */
+    .main-nav {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 18px;
+      z-index: 3;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 8px 16px;
+      border-radius: 30px;
+      backdrop-filter: blur(4px);
+    }
+
+    .main-nav a {
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.2s ease;
+    }
+
+    .main-nav a:hover {
+      color: white;
+    }
+
+    /* Заголовок поверх видео */
+    .hero-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      color: white;
+      text-align: center;
+      padding: 0 20px;
+      max-width: 900px;
+    }
+
+    .hero-overlay h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      line-height: 1.3;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    }
+
+    /* === Бургер-меню (мобильные) === */
+    .burger-menu {
+      display: none;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      z-index: 4;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 36px;
+      height: 36px;
+      background: rgba(0, 0, 0, 0.4);
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      padding: 0;
+      backdrop-filter: blur(4px);
+    }
+
+    .burger-menu span {
+      display: block;
+      height: 3px;
+      width: 24px;
+      background: white;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    /* Основной контент на фоне */
+    .content-section {
+      background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('/images/ITK Health Goods2025.png') no-repeat center center;
+      background-size: cover;
+      padding: 80px 20px;
+      color: white;
+      text-align: center;
+    }
+
+    .content-section h2 {
+      font-size: 2rem;
+      margin-bottom: 25px;
+    }
+
+    .content-section p {
+      max-width: 800px;
+      margin: 0 auto 20px;
+      line-height: 1.7;
+      font-size: 1.1rem;
+    }
+
+    .highlight {
+      color: #a8d8b9;
+      font-weight: bold;
+    }
+
+    .whatsapp-btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 32px;
+      background-color: #25D366;
+      color: white !important;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #128C7E;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: rgba(255, 255, 255, 0.95);
+      font-size: 14px;
+      color: #666;
+    }
+
+    footer a {
+      color: #2c5e3c;
+      text-decoration: none;
+    }
+
+    /* === Адаптив: мобильные устройства === */
+    @media (max-width: 768px) {
+      .main-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 280px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 80px;
+        gap: 24px;
+        background: rgba(0, 0, 0, 0.92);
+        backdrop-filter: blur(10px);
+        transform: translateX(-100%);
+        transition: transform 0.4s ease;
+        z-index: 5;
+      }
+
+      .main-nav.active {
+        transform: translateX(0);
+      }
+
+      .main-nav a {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 1.2rem;
+        text-align: center;
+      }
+
+      .main-nav a:hover {
+        color: #a8d8b9;
+      }
+
+      .burger-menu {
+        display: flex;
+      }
+
+      .burger-menu.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+      }
+      .burger-menu.active span:nth-child(2) {
+        opacity: 0;
+      }
+      .burger-menu.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+      }
+
+      .hero-overlay h1 {
+        font-size: 1.8rem;
+        padding: 0 15px;
+      }
+
+      .content-section h2 {
+        font-size: 1.6rem;
+      }
+
+      .content-section p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Видео-шапка с адаптивной навигацией -->
+  <section class="hero-video">
+    <video autoplay muted loop playsinline>
+      <source src="/videos/Hong Kong night.mp4" type="video/mp4">
+      Ваш браузер не поддерживает видео.
+    </video>
+
+    <button class="burger-menu" aria-label="Меню">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="main-nav">
+      <a href="index.html">Главная</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="request.html">Запрос из Китая</a>
+      <a href="blog.html">Блог</a>
+      <a href="medicine_in_china.html">Современная медицина в Китае</a>
+      <a href="consultant.html">AI-консультант</a>
+      <a href="wholesale.html">Оптовые поставки</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+
+    <div class="hero-overlay">
+      <h1>Оптовые поставки из Китая — быстро, надёжно, без посредников</h1>
+    </div>
+  </section>
+
+  <!-- Основной текст -->
+  <section class="content-section">
+    <h2>Перевели рубли — получили товар из Китая. Без сложностей.</h2>
+    <p>
+      Мы знаем, с какими трудностями сталкиваются предприниматели в России при закупках из Китая: 
+      задержки, таможенные споры, недобросовестные поставщики, отсутствие гарантий качества.
+    </p>
+    <p>
+      <span class="highlight">С нами — всё иначе.</span> 
+      Вы переводите рубли → мы оперативно выкупаем товар на нашем складе в Китае → оформляем все документы → отправляем вам партию напрямую.
+    </p>
+    <p>
+      <strong>На нашем складе в Китае — более 200 наименований продукции:</strong>
+      традиционные китайские препараты (ТКМ), БАДы, травы, капсулы, таблетки, чаи, средства для сердца, сосудов, иммунитета и нервной системы — всё сертифицировано и в наличии.
+    </p>
+    <p>
+      Никаких «под заказ», ожиданий по 2 месяца и рисков. Только проверенные позиции, реальные остатки и прямая логистика.
+    </p>
+    <a href="https://wa.me/79871149378?text=Здравствуйте!%20Интересуют%20оптовые%20поставки%20из%20Китая." 
+       class="whatsapp-btn">
+      Обсудить поставку →
+    </a>
+  </section>
+
+  <footer>
+    <p>© 2025 ITTK. Все права защищены.</p>
+    <p>Сайт не является аптекой. Продукция — биологически активные добавки.</p>
+    <p>Для деловых вопросов: <a href="mailto:i.t.t.m@qq.com">i.t.t.m@qq.com</a></p>
+  </footer>
+
+  <!-- JavaScript для бургер-меню -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const burger = document.querySelector('.burger-menu');
+      const nav = document.querySelector('.main-nav');
+
+      burger.addEventListener('click', () => {
+        burger.classList.toggle('active');
+        nav.classList.toggle('active');
+      });
+
+      document.querySelectorAll('.main-nav a').forEach(link => {
+        link.addEventListener('click', () => {
+          burger.classList.remove('active');
+          nav.classList.remove('active');
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
