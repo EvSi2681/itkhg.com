@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Оптовые поставки из Китая — ITK Health Goods</title>
+  <meta name="description" content="Надёжные оптовые поставки товаров традиционной китайской медицины из Китая в Россию. Перевели рубли — получили товар без посредников и проблем.">
   <style>
     * {
       margin: 0;
@@ -12,6 +13,7 @@
       font-family: 'Segoe UI', sans-serif;
     }
 
+    /* === Видео на весь экран === */
     .full-video {
       position: relative;
       width: 100%;
@@ -32,6 +34,7 @@
       z-index: 1;
     }
 
+    /* Навигация — фиксированная сверху */
     .top-nav {
       position: fixed;
       top: 0;
@@ -42,12 +45,14 @@
       z-index: 10;
       padding: 10px 20px;
       text-align: center;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
     }
 
     .top-nav a {
       color: white;
       text-decoration: none;
-      margin: 0 12px;
       font-weight: 600;
       transition: color 0.2s ease;
     }
@@ -56,6 +61,35 @@
       color: #a8d8b9;
     }
 
+    /* Бургер-кнопка (только на мобильных) */
+    .burger-menu {
+      display: none;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      z-index: 11;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 36px;
+      height: 36px;
+      background: rgba(0, 0, 0, 0.4);
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      padding: 0;
+      backdrop-filter: blur(4px);
+    }
+
+    .burger-menu span {
+      display: block;
+      height: 3px;
+      width: 24px;
+      background: white;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    /* Текст поверх видео */
     .video-overlay {
       position: absolute;
       top: 50%;
@@ -82,6 +116,7 @@
       margin-bottom: 30px;
     }
 
+    /* === Блок под видео — с фоновым фото === */
     .content-section {
       background: 
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -136,16 +171,72 @@
       color: #666;
     }
 
+    footer a {
+      color: #2c5e3c;
+      text-decoration: none;
+    }
+
+    /* === Адаптив: мобильные устройства === */
     @media (max-width: 768px) {
+      .top-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 280px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 80px;
+        gap: 24px;
+        background: rgba(0, 0, 0, 0.92);
+        backdrop-filter: blur(10px);
+        transform: translateX(-100%);
+        transition: transform 0.4s ease;
+        z-index: 11;
+      }
+
+      .top-nav.active {
+        transform: translateX(0);
+      }
+
+      .top-nav a {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 1.2rem;
+        text-align: center;
+      }
+
+      .top-nav a:hover {
+        color: #a8d8b9;
+      }
+
+      .burger-menu {
+        display: flex;
+      }
+
+      .burger-menu.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+      }
+      .burger-menu.active span:nth-child(2) {
+        opacity: 0;
+      }
+      .burger-menu.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+      }
+
       .video-overlay h1 {
         font-size: 1.8rem;
+        padding: 0 15px;
       }
+
       .video-overlay p {
         font-size: 1rem;
       }
+
       .content-section h2 {
         font-size: 1.6rem;
       }
+
       .content-section p {
         font-size: 1rem;
       }
@@ -154,12 +245,14 @@
 </head>
 <body>
 
+  <!-- Видео на весь экран -->
   <section class="full-video">
     <video autoplay muted loop playsinline>
       <source src="/videos/Hong Kong night.mp4" type="video/mp4">
       Ваш браузер не поддерживает видео.
     </video>
 
+    <!-- Фиксированная навигация + бургер -->
     <nav class="top-nav">
       <a href="index.html">Главная</a>
       <a href="catalog.html">Каталог</a>
@@ -171,12 +264,20 @@
       <a href="contacts.html">Контакты</a>
     </nav>
 
+    <button class="burger-menu" aria-label="Меню">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Текст поверх видео -->
     <div class="video-overlay">
       <h1>Оптовые поставки из Китая — быстро, надёжно, без посредников</h1>
       <p>Перевели рубли — получили товар. Без задержек, таможенных споров и рисков.</p>
     </div>
   </section>
 
+  <!-- Блок с фоновым фото -->
   <section class="content-section">
     <h2>Перевели рубли — получили товар из Китая. Без сложностей.</h2>
     <p>
@@ -200,7 +301,8 @@
     </a>
   </section>
 
-  <p>© 2025 ITTM. Все права защищены.</p>
+  <footer>
+    <p>© 2025 ITTM. Все права защищены.</p>
         <p>Сайт не является аптекой. Не заменяет консультацию врача.</p>
         <p>Для деловых вопросов: <a href="mailto:i.t.t.m@qq.com">i.t.t.m@qq.com</a></p>
         <div style="margin-top: 15px; text-align: center; font-size: 14px; color: #666;">
@@ -211,6 +313,29 @@
             </a>
         </div>
     </footer>
+
+  <!-- JavaScript для бургер-меню -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const burger = document.querySelector('.burger-menu');
+      const nav = document.querySelector('.top-nav');
+
+      burger.addEventListener('click', () => {
+        burger.classList.toggle('active');
+        nav.classList.toggle('active');
+      });
+
+      // Закрыть меню при клике на ссылку
+      document.querySelectorAll('.top-nav a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth <= 768) { // Только на мобильных
+            burger.classList.remove('active');
+            nav.classList.remove('active');
+          }
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>
